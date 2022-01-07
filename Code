@@ -1229,8 +1229,3924 @@ public class dee extends JFrame
 	   }
 }
 	  
-	   
-	  
+
+package code;
+
+import java.awt.event.ActionEvent;
+//import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.Color;
+import java.awt.Cursor;
+import java.awt.Dimension;
+import java.awt.EventQueue;
+import java.awt.Font;
+import javax.swing.*;
+
+public class dae extends JFrame
+{
+	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	static JFrame f1;
+
+	public static void main(String[] args) {
+        EventQueue.invokeLater(new Runnable() {
+            @SuppressWarnings("static-access")
+			public void run() {
+                try {
+                    dae window = new dae();
+                    window.f1.setVisible(true);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+        });
+    }
+	 public dae() {
+	        initialize();
+	    }
+
+	 private void initialize()
+	 {
+
+	        JFrame frame=new JFrame();
+	        frame.setVisible(true);
+	        //frame.setSize(800,600);
+	        //frame.setLocation(200,50);
+	        frame.setBounds(-10,0,1800,740);
+	        frame.setTitle("Career World --Way To Success");
+	        ImageIcon icon=new ImageIcon("C:\\Users\\TAK\\workspace\\CareerWorld\\src\\image\\PicsArt_1485415453700.png");
+	      //  ImageIcon icon1=new ImageIcon("PicsArt_1485415453700.png");
+	        ImageIcon icon2=new ImageIcon("C:\\Users\\TAK\\workspace\\CareerWorld\\src\\image\\aeronautical-engineering-image.jpg");
+	        ImageIcon icon3=new ImageIcon("C:\\Users\\TAK\\workspace\\CareerWorld\\src\\image\\pensitdown1.jpg");
+	        ImageIcon icon4=new ImageIcon("C:\\Users\\TAK\\workspace\\CareerWorld\\src\\image\\_20170203_010755.JPG");
+	        ImageIcon icon5=new ImageIcon("C:\\Users\\TAK\\workspace\\CareerWorld\\src\\image\\ca7b81256d27f757790508035a8177c0.png");	        
+	        ImageIcon icon6=new ImageIcon("C:\\Users\\TAK\\workspace\\CareerWorld\\src\\image\\images(1).jpg");
+	        frame.setIconImage(icon.getImage());
+	        
+	        
+	        
+	        JPanel co = new JPanel();
+	        co.setLayout(null);
+	        //co.setBackground(Color.blue);
+	        JScrollPane sp = new JScrollPane(co);
+	        co.setPreferredSize(new Dimension(100, 1850));
+
+	    
+	        
+	        
+	        JLabel label1 = new JLabel("DashBoard");
+	        label1.setBounds(50,470,300,50); 
+	        Font f1=new Font("Arial",Font.BOLD,30);
+	         label1.setFont(f1);
+	        
+	        JButton b1 = new JButton(icon5);
+	        b1.setBounds(75,520,80,80);
+	        Cursor cur = new Cursor(Cursor.HAND_CURSOR);
+	        b1.setCursor(cur);
+
+	        
+
+	        b1.addActionListener(new ActionListener()
+	     	{
+	     			public void actionPerformed(ActionEvent e)
+	     			{
+	     				b1Event(e);
+	     			}
+	    			
+	     		});
+	        
+	        
+	        
+	        JButton logout = new JButton(icon6);
+   	        logout.setBounds(75,700,80,80);
+   	       
+   	        logout.setCursor(cur);
+   	        
+   	     logout.addActionListener(new ActionListener()
+	     	{
+	     			public void actionPerformed(ActionEvent e)
+	     			{
+	     				logoutEvent(e);
+	     			}
+	    			
+	    	});
+	       
+	        
+	        JButton b2 = new JButton("About");
+	        b2.setBounds(50,610,130,30);
+	        b2.setCursor(cur);
+	        
+	        
+	        b2.addActionListener(new ActionListener()
+	     	{
+	     			public void actionPerformed(ActionEvent e)
+	     			{
+	     				b2Event(e);
+	     			}
+	    			
+	     		});
+	       
+
+	        
+	        JButton b3 = new JButton("Expert Guidance");
+	        b3.setBounds(50,660,130,30);
+	        b3.setCursor(cur);
+
+	        b3.addActionListener(new ActionListener()
+	     	{
+	     			public void actionPerformed(ActionEvent e)
+	     			{
+	     				b3Event(e);
+	     			}
+	    			
+	     		});
+	       
+	        
+	        
+	       // JLabel logo= new JLabel(icon1);
+	       // logo.setBounds(-20,110,300,300);
+	           
+	        JLabel label2 = new JLabel(icon2);
+	        label2.setBounds(-20,0,1400,450);
+	        
+	        JLabel label4 = new JLabel(icon3);
+	        label4.setBounds(840,500,600,300);
+	        
+	        
+	        JLabel label5 = new JLabel(icon4);
+	        label5.setBounds(20,1095,250,200);
+
+	        
+	        
+	        
+	        
+	        JLabel label3 = new JLabel("Diploma in Aeronautical Engineering");
+	        label3.setBounds(440,470,700,40); 
+	        Font f2=new Font("copperplate Gothic Bold",Font.PLAIN,30);
+	           label3.setFont(f2);
+	           label3.setForeground(Color.blue);
+	           
+	           
+	           JTextArea a1 = new JTextArea("-Diploma in Aeronautical Engineering is a "
+	           		+ "3 years long \nDiploma certificate program. In this article, you will be reading "
+	           		+ "\ndetails about Diploma in Aeronautical Engineering course, such "
+	           		+ "\nas- eligibility criteria, admission process, career prospects "
+	           		+ "\nand career paths."
+	           		+ "\n \n-We rely on Airlines for transportation of people and goods. "
+	           		+ "\nAeronautical Engineering is a discipline that is directly related "
+	           		+ "\nto airlines and aviation sector. It deals with design, \nmanufacturing, "
+	           		+ "maintenance, service and testing of aircraft.");
+	              a1.setBounds(280,520,640,265); 
+	              Font f3=new Font("Verdana",Font.PLAIN,20);
+	               a1.setFont(f3);
+	              // a1.setForeground(Color.red);
+	               a1.setEditable(false);
+	             
+	           
+	               
+	               JTextArea a2 = new JTextArea("-It is a job oriented course. On completing the course, Diploma holders may find work at "
+	               		+ "\nmajor airlines, aircraft maintenance firms, parts and component manufacturing firms etc. Let us "
+	               		+ "\ncheck out further details about the discipline of Aeronautical Engineering in the next section-"
+	               		+ "\n \n-Aeronautical Engineering is a discipline that deals with aeronautics. Aeronautics includes "
+	               		+ "\nstudy, design, development and testing of air flight capable machines."
+	               		+ "\n \n-Various types of air flight capable machines are- aircraft, missiles, drones, satellites, "
+	               		+ "\nrockets and space shuttles. The term �Aeronautical Engineering� has been derived from Aeronautics. "
+	               		+ "\nThus, it is evident that this branch of Engineering primarily deals with the design, development, "
+	               		+ "\nplanning, manufacturing and testing of flight capable machines mentioned above!"
+	               		+ "\n \n-The Diploma course can be said to be multidisciplinary. It contains elements of mechanical, "
+	               		+ "\nelectrical and electronics engineering."
+	               		+ "\n \n-Since this branch involves manufacturing and maintenance of complex flying structures, it can "
+	               		+ "\nbe said to be a challenging and technically demanding field. At the same time, careers associated "
+	               		+ "\nwith this sector are financially rewarding too. Aviation sector is dependent on Aeronautical Engineers. "
+	               		+ "\nAviation sector is growing. This growth has been creating new and better job opportunities for "
+	               		+ "\nAeronautical Engineers."
+	               		+ "\n \n-Diploma in Aeronautical Engineering course trains students in areas such as- aerodynamics, "
+	               		+ "\nnavigation systems, control systems etc of air flight capable machines such as aircraft,missiles etc");
+	   	              a2.setBounds(280,790,1050,600); 
+	   	               a2.setFont(f3);
+	   	              // a1.setForeground(Color.red);
+	   	               a2.setEditable(false);
+	   	       
+	   	               
+	   	            JTextArea a3 = new JTextArea("1st semester subjects - "
+	   	            		+ " \n�Mathematics"
+	   	            		+ " \n�Computer Programming (Introduction)"
+	   	            		+ " \n�Digital Electronics"
+	   	            		+ " \n�Basic Electronics"
+	   	            		+ " \n�Computer Application (Introduction)");
+	   		              a3.setBounds(280,1395,400,170);
+	   		               a3.setFont(f3);
+	   		              // a1.setForeground(Color.red);
+	   		               a3.setEditable(false);
+	   		               
+	   		               
+	   		            JTextArea a4 = new JTextArea("2nd semester subjects - "
+		   	            		+ " \n�Mathematics"
+		   	            		+ " \n�Engineering Physics"
+		   	            		+ " \n�Computer Programming (Advanced)"
+		   	            		+ " \n�Basic Electronics"
+		   	            		+ " \n�Web Designing");
+		   		              a4.setBounds(690,1395,400,170);
+		   		               a4.setFont(f3);
+		   		              // a1.setForeground(Color.red);
+		   		               a4.setEditable(false);
+		   		               
+		   		              
+		   		               
+		   		           
+		   		            JTextArea a5 = new JTextArea("3rd semester subjects- "
+			   	            		+ " \n�C++ Programing"
+			   	            		+ " \n�DBMS"
+			   	            		+ " \n�Operating System"
+			   	            		+ " \n�Data Structure"
+			   	            		+ " \n�Microprocessor");
+			   		              a5.setBounds(1100,1395,235,170);
+			   		               a5.setFont(f3);
+			   		              // a1.setForeground(Color.red);
+			   		               a5.setEditable(false);
+			   		               
+			   		               
+			   		            JTextArea a6 = new JTextArea("4th semester subjects - "
+			   		            		+ "\n�Computer Networks"
+			   		            		+ "\n�Software Development (Basics)"
+			   		            		+ "\n�Database Management System "
+			   		            		+ "\n�Software Engineering"
+			   		            		+ "\n�Visual Basic C++");
+				   		              a6.setBounds(280,1570,400,170);
+				   		               a6.setFont(f3);
+				   		              // a1.setForeground(Color.red);
+				   		               a6.setEditable(false);
+				   		               
+				   		               
+				   		            JTextArea a7 = new JTextArea("5th semester subjects - "
+					   	            		+ " \n�Java Programing"
+					   	            		+ " \n�Web Development"
+					   	            		+ " \n�Computer Maintainance"
+					   	            		+ " \n�Elective Project"
+					   	            		+ " \n�Basic Management Skills");
+					   		              a7.setBounds(690,1570,400,170);
+					   		               a7.setFont(f3);
+					   		              // a1.setForeground(Color.red);
+					   		               a7.setEditable(false);
+					   		                       
+				   		           
+					   		               
+					   		               
+					   		            JTextArea a8 = new JTextArea("6th semester subjects- "
+						   	            		+ " \n�Advanced Java"
+						   	            		+ " \n�Software Testing"
+						   	            		+ " \n�AMI"
+						   	            		+ " \n�Management"
+						   	            		+ " \n�EDP");
+						   		              a8.setBounds(1100,1570,235,170);
+						   		               a8.setFont(f3);
+						   		              // a1.setForeground(Color.red);
+						   		               a8.setEditable(false);
+			   		               
+	               
+	        
+						   		            JButton b4 = new JButton("Take an Aptitude Test >>>");
+							   		         Font f4=new Font("AR JULIAN",Font.BOLD,20);
+							   	            b4.setFont(f4);
+							   	              b4.setBounds(600,1770,300,40);
+							   	            b4.setForeground(Color.red);
+		                                    b4.setCursor(cur);
+		                                    
+		                                    b4.addActionListener(new ActionListener()
+		                                 	{
+		                                 			public void actionPerformed(ActionEvent e)
+		                                 			{
+		                                 				b4Event(e);
+		                                 			}
+		                                			
+		                                 		});
+	        co.add(label1);
+	        co.add(label2);
+	        co.add(label3);
+	        co.add(label4);
+	        co.add(label5);
+	        co.add(a1);
+	        co.add(a2);
+	        co.add(a3);
+	        co.add(a4);
+	        co.add(a5);
+	        co.add(a6);
+	        co.add(a7);
+	        co.add(a8);
+	       // co.add(logo);
+	        co.add(b1);
+	        co.add(b2);
+	        co.add(b3);
+	        co.add(b4);
+	       co.add(logout); 
+	        frame.getContentPane().add(sp);	        
+}
+	 public static void b1Event(ActionEvent e)
+	    {
+			Home h = new Home();
+		    h.setVisible(true);
+		       	
+		}
+	 
+	 
+	 public static void b2Event(ActionEvent e)
+	    {
+			About a = new About();
+		    a.setVisible(true);
+		       	
+		}
+	 
+	 public static void b3Event(ActionEvent e)
+	    {
+			EG eg = new EG();
+		    eg.setVisible(true);
+		       	
+		}
+	 
+	 public static void logoutEvent(ActionEvent e)
+	    {
+			Login l = new Login();
+		    l.setVisible(true);
+		       	
+		}
+	 public static void b4Event(ActionEvent e)
+	    {
+		   
+		 TabbedPane tp = new TabbedPane();
+		    tp.setVisible(true);
+		}
+	 
+	 
+	 public void setVisible(boolean b)
+	   {
+		   this.setVisible(true);
+	   }
+	 
+	 
+}
+package code;
+
+import java.awt.event.ActionEvent;
+//import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.Color;
+import java.awt.Cursor;
+import java.awt.Dimension;
+import java.awt.EventQueue;
+import java.awt.Font;
+import javax.swing.*;
+
+public class ce extends JFrame
+{
+	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	static JFrame f1;
+
+	public static void main(String[] args) {
+        EventQueue.invokeLater(new Runnable() {
+            @SuppressWarnings("static-access")
+			public void run() {
+                try {
+                    ce window = new ce();
+                    window.f1.setVisible(true);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+        });
+    }
+	 public ce() {
+	        initialize();
+	    }
+
+	 private void initialize()
+	 {
+
+	        JFrame frame=new JFrame();
+	        frame.setVisible(true);
+	        //frame.setSize(800,600);
+	        //frame.setLocation(200,50);
+	        frame.setBounds(-10,0,1800,740);
+	        frame.setTitle("Career World --Way To Success");
+	        ImageIcon icon=new ImageIcon("C:\\Users\\TAK\\workspace\\CareerWorld\\src\\image\\PicsArt_1485415453700.png");
+	      //  ImageIcon icon1=new ImageIcon("PicsArt_1485415453700.png");
+	        ImageIcon icon2=new ImageIcon("C:\\Users\\TAK\\workspace\\CareerWorld\\src\\image\\sce-banner-1.jpg");
+	        ImageIcon icon3=new ImageIcon("C:\\Users\\TAK\\workspace\\CareerWorld\\src\\image\\pensitdown1.jpg");
+	        ImageIcon icon4=new ImageIcon("C:\\Users\\TAK\\workspace\\CareerWorld\\src\\image\\infraestructura.jpg");
+	        ImageIcon icon5=new ImageIcon("C:\\Users\\TAK\\workspace\\CareerWorld\\src\\image\\ca7b81256d27f757790508035a8177c0.png");	        
+	        ImageIcon icon6=new ImageIcon("C:\\Users\\TAK\\workspace\\CareerWorld\\src\\image\\images(1).jpg");
+	        
+	        frame.setIconImage(icon.getImage());
+	        
+	        
+	        
+	        JPanel co = new JPanel();
+	        co.setLayout(null);
+	        //co.setBackground(Color.blue);
+	        JScrollPane sp = new JScrollPane(co);
+	        co.setPreferredSize(new Dimension(100, 1850));
+
+	    
+	        
+	        
+	        JLabel label1 = new JLabel("DashBoard");
+	        label1.setBounds(50,470,300,50); 
+	        Font f1=new Font("Arial",Font.BOLD,30);
+	         label1.setFont(f1);
+	        
+	        JButton b1 = new JButton(icon5);
+	        b1.setBounds(75,520,80,80);
+	        Cursor cur = new Cursor(Cursor.HAND_CURSOR);
+	        b1.setCursor(cur);
+
+	        b1.addActionListener(new ActionListener()
+	     	{
+	     			public void actionPerformed(ActionEvent e)
+	     			{
+	     				b1Event(e);
+	     			}
+	     			
+	     			
+	    			
+	     		});
+	        
+	        JButton logout = new JButton(icon6);
+   	        logout.setBounds(75,720,80,80);
+   	        
+   	        logout.setCursor(cur);
+   	        
+   	     logout.addActionListener(new ActionListener()
+	     	{
+	     			public void actionPerformed(ActionEvent e)
+	     			{
+	     				logoutEvent(e);
+	     			}
+	    			
+	    	});
+   	     
+	        JButton b2 = new JButton("About");
+	        b2.setBounds(50,620,130,30);
+	        b2.setCursor(cur);
+	        
+	        b2.addActionListener(new ActionListener()
+	     	{
+	     			public void actionPerformed(ActionEvent e)
+	     			{
+	     				b2Event(e);
+	     			}
+	    			
+	     		});
+	       
+
+	        
+	        JButton b3 = new JButton("Expert Guidance");
+	        b3.setBounds(50,670,130,30);
+	        b3.setCursor(cur);
+
+	        b3.addActionListener(new ActionListener()
+	     	{
+	     			public void actionPerformed(ActionEvent e)
+	     			{
+	     				b3Event(e);
+	     			}
+	    			
+	     		});
+	       
+	       // JLabel logo= new JLabel(icon1);
+	       // logo.setBounds(-20,110,300,300);
+	           
+	        JLabel label2 = new JLabel(icon2);
+	        label2.setBounds(-20,0,1400,450);
+	        
+	       JLabel label4 = new JLabel(icon3);
+	        label4.setBounds(840,500,600,300);
+	        
+	        
+	        JLabel label5 = new JLabel(icon4);
+	        label5.setBounds(20,1095,250,200);
+
+	        
+	        
+	        
+	        
+	        JLabel label3 = new JLabel("Computer Engineering");
+	        label3.setBounds(360,470,700,40); 
+	        Font f2=new Font("copperplate Gothic Bold",Font.PLAIN,30);
+	           label3.setFont(f2);
+	           label3.setForeground(Color.blue);
+	           
+	           
+	           JTextArea a1 = new JTextArea("-Computer Engineering is a discipline that focuses on the "
+	           		+ "\nstudy and development of computer software and hardware. "
+	           		+ "\n \n-It can be said to be an integrated discipline, consisting"
+	           		+ "\nof elements of electrical engineering, computer science and "
+	           		+ "\nelectronics engineering."
+	           		+ "\n \n-Some of the important topics covered in this branch of "
+	           		+ "\nengineering include: Microcontrollers, Microprocessors, "
+	           		+ "\nSoftware Development & Testing,Circuit Design & Networking.");
+	              a1.setBounds(280,520,640,265); 
+	              Font f3=new Font("Verdana",Font.PLAIN,20);
+	               a1.setFont(f3);
+	              // a1.setForeground(Color.red);
+	               a1.setEditable(false);
+	             
+	           
+	               
+	               JTextArea a2 = new JTextArea("-Main tasks of computer engineers include designing, planning, testing and supervision of computer "
+	               		+ "\nsystems- both hardware and software."
+	               		+ "\n \n-Technology is developing at such a rapid pace that the field of computer engineering is going "
+	               		+ "\nthrough many changes. A computer engineer must keep himself up to date with such developments. "
+	               		+ "\n \n-In short, one must be ready for continuous learning!"
+	               		+ "\n \n-Diploma in Computer Engineering is a 3 years long program. It follows the semester system of "
+	               		+ "\nlearning. Each academic year is divided into two semesters, with each semester lasting for a "
+	               		+ "period \nof 6 months."
+	               		+ "\n \n-Students who have passed 12th standard are eligible to pursue this course. This course can "
+	               		+ "also be \npursued after 12 Science stream schooling too (Mathematics group)!"
+	               		+ "\n \n-Many polytechnic, technical education and engineering institutes across "
+	               		+ "India are offering this \nprogram. Most institutes usually have the �direct admission� process. "
+	               		+ "\n \n-Interested students have to approach the institute and fill up the admission form. Seats will "
+	               		+ "be \nallotted to deserving students on the basis of marks scored by them in 10th board examination "
+	               		+ "\n(usually in Mathematics and Science subjects).");
+	   	              a2.setBounds(280,790,1050,600); 
+	   	               a2.setFont(f3);
+	   	              // a1.setForeground(Color.red);
+	   	               a2.setEditable(false);
+	   	       
+	   	               
+	   	            JTextArea a3 = new JTextArea("1st semester subjects - "
+	   	            		+ " \n�Mathematics"
+	   	            		+ " \n�Computer Programming (Introduction)"
+	   	            		+ " \n�Digital Electronics"
+	   	            		+ " \n�Basic Electronics"
+	   	            		+ " \n�Computer Application (Introduction)");
+	   		              a3.setBounds(280,1395,400,170);
+	   		               a3.setFont(f3);
+	   		              // a1.setForeground(Color.red);
+	   		               a3.setEditable(false);
+	   		               
+	   		               
+	   		            JTextArea a4 = new JTextArea("2nd semester subjects - "
+		   	            		+ " \n�Mathematics"
+		   	            		+ " \n�Engineering Physics"
+		   	            		+ " \n�Computer Programming (Advanced)"
+		   	            		+ " \n�Basic Electronics"
+		   	            		+ " \n�Web Designing");
+		   		              a4.setBounds(690,1395,400,170);
+		   		               a4.setFont(f3);
+		   		              // a1.setForeground(Color.red);
+		   		               a4.setEditable(false);
+		   		               
+		   		              
+		   		               
+		   		           
+		   		            JTextArea a5 = new JTextArea("3rd semester subjects- "
+			   	            		+ " \n�C++ Programing"
+			   	            		+ " \n�DBMS"
+			   	            		+ " \n�Operating System"
+			   	            		+ " \n�Data Structure"
+			   	            		+ " \n�Microprocessor");
+			   		              a5.setBounds(1100,1395,235,170);
+			   		               a5.setFont(f3);
+			   		              // a1.setForeground(Color.red);
+			   		               a5.setEditable(false);
+			   		               
+			   		               
+			   		            JTextArea a6 = new JTextArea("4th semester subjects - "
+			   		            		+ "\n�Computer Networks"
+			   		            		+ "\n�Software Development (Basics)"
+			   		            		+ "\n�Database Management System "
+			   		            		+ "\n�Software Engineering"
+			   		            		+ "\n�Visual Basic C++");
+				   		              a6.setBounds(280,1570,400,170);
+				   		               a6.setFont(f3);
+				   		              // a1.setForeground(Color.red);
+				   		               a6.setEditable(false);
+				   		               
+				   		               
+				   		            JTextArea a7 = new JTextArea("5th semester subjects - "
+					   	            		+ " \n�Java Programing"
+					   	            		+ " \n�Web Development"
+					   	            		+ " \n�Computer Maintainance"
+					   	            		+ " \n�Elective Project"
+					   	            		+ " \n�Basic Management Skills");
+					   		              a7.setBounds(690,1570,400,170);
+					   		               a7.setFont(f3);
+					   		              // a1.setForeground(Color.red);
+					   		               a7.setEditable(false);
+					   		                       
+				   		           
+					   		               
+					   		               
+					   		            JTextArea a8 = new JTextArea("6th semester subjects- "
+						   	            		+ " \n�Advanced Java"
+						   	            		+ " \n�Software Testing"
+						   	            		+ " \n�AMI"
+						   	            		+ " \n�Management"
+						   	            		+ " \n�EDP");
+						   		              a8.setBounds(1100,1570,235,170);
+						   		               a8.setFont(f3);
+						   		              // a1.setForeground(Color.red);
+						   		               a8.setEditable(false);
+			   		               
+	               
+	        
+						   		            JButton b4 = new JButton("Take an Aptitude Test >>>");
+							   		         Font f4=new Font("AR JULIAN",Font.BOLD,20);
+							   	            b4.setFont(f4);
+							   	              b4.setBounds(600,1770,300,40);
+							   	            b4.setForeground(Color.red);
+		                                    b4.setCursor(cur);
+		                                    
+		                                    b4.addActionListener(new ActionListener()
+		                                 	{
+		                                 			public void actionPerformed(ActionEvent e)
+		                                 			{
+		                                 				b4Event(e);
+		                                 			}
+		                                			
+		                                 		});
+	           
+	        co.add(label1);
+	        co.add(label2);
+	        co.add(label3);
+	        co.add(label4);
+	        co.add(label5);
+	        co.add(a1);
+	        co.add(a2);
+	        co.add(a3);
+	        co.add(a4);
+	        co.add(a5);
+	        co.add(a6);
+	        co.add(a7);
+	        co.add(a8);
+	       // co.add(logo);
+	        co.add(b1);
+	        co.add(b2);
+	        co.add(b3);
+	        co.add(b4);
+	        co.add(logout);
+	        
+	        frame.getContentPane().add(sp);	        
+}
+	 public static void b1Event(ActionEvent e)
+	    {
+			Home h = new Home();
+		    h.setVisible(true);
+		       	
+		}
+	 
+	 public static void logoutEvent(ActionEvent e)
+	    {
+			Login l = new Login();
+		    l.setVisible(true);
+		       	
+		}
+
+	 public static void b2Event(ActionEvent e)
+	    {
+			About a = new About();
+		    a.setVisible(true);
+		       	
+		}
+	 public static void b4Event(ActionEvent e)
+	    {
+		   
+		 TabbedPane tp = new TabbedPane();
+		    tp.setVisible(true);
+		}
+	 
+	 public static void b3Event(ActionEvent e)
+	    {
+			EG eg = new EG();
+		    eg.setVisible(true);
+		       	
+		}
+	 
+	 
+	 
+	 public void setVisible(boolean b)
+	   {
+		   this.setVisible(true);
+	   }
+}
+package code;
+
+
+import java.awt.event.ActionEvent;
+//import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.Color;
+import java.awt.Cursor;
+import java.awt.Dimension;
+import java.awt.EventQueue;
+import java.awt.Font;
+import javax.swing.*;
+
+public class bcom extends JFrame
+{
+	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	static JFrame f1;
+
+	public static void main(String[] args) {
+        EventQueue.invokeLater(new Runnable() {
+            @SuppressWarnings("static-access")
+			public void run() {
+                try {
+                    bcom window = new bcom();
+                    window.f1.setVisible(true);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+        });
+    }
+	 public bcom() {
+	        initialize();
+	    }
+
+	 private void initialize()
+	 {
+
+	        JFrame frame=new JFrame();
+	        frame.setVisible(true);
+	        //frame.setSize(800,600);
+	        //frame.setLocation(200,50);
+	        frame.setBounds(-10,0,1800,740);
+	        frame.setTitle("Career World --Way To Success");
+	        ImageIcon icon=new ImageIcon("C:\\Users\\TAK\\workspace\\CareerWorld\\src\\image\\PicsArt_1485415453700.png");
+	      //  ImageIcon icon1=new ImageIcon("C:\\Users\\TAK\\workspace\\CareerWorld\\PicsArt_1485415453700.png");
+	        ImageIcon icon2=new ImageIcon("C:\\Users\\TAK\\workspace\\CareerWorld\\src\\image\\Bachelors-Degree-Headers-900-BOCA.jpg");
+	        ImageIcon icon3=new ImageIcon("C:\\Users\\TAK\\workspace\\CareerWorld\\src\\image\\Career-BCom1.jpg");
+	        ImageIcon icon4=new ImageIcon("C:\\Users\\TAK\\workspace\\CareerWorld\\src\\image\\B.com-Course.jpg");
+	        ImageIcon icon5=new ImageIcon("C:\\Users\\TAK\\workspace\\CareerWorld\\src\\image\\ca7b81256d27f757790508035a8177c0.png");
+	        ImageIcon icon6=new ImageIcon("C:\\Users\\TAK\\workspace\\CareerWorld\\src\\image\\images(1).jpg");
+	        
+	        frame.setIconImage(icon.getImage());
+	        
+	        
+	        
+	        JPanel co = new JPanel();
+	        co.setLayout(null);
+	        //co.setBackground(Color.blue);
+	        JScrollPane sp = new JScrollPane(co);
+	        co.setPreferredSize(new Dimension(100, 1850));
+
+	    
+	        
+	        
+	        JLabel label1 = new JLabel("DashBoard");
+	        label1.setBounds(50,470,300,50); 
+	        Font f1=new Font("Arial",Font.BOLD,30);
+	         label1.setFont(f1);
+	        
+	        JButton b1 = new JButton(icon5);
+	        b1.setBounds(75,520,80,80);
+	        Cursor cur = new Cursor(Cursor.HAND_CURSOR);
+	        b1.setCursor(cur);
+	        
+	        
+	        b1.addActionListener(new ActionListener()
+         	{
+         			public void actionPerformed(ActionEvent e)
+         			{
+         				b1Event(e);
+         			}
+        			
+         		});
+
+	        JButton logout = new JButton(icon6);
+   	        logout.setBounds(75,700,80,80);
+   	       
+   	        logout.setCursor(cur);
+   	        
+   	     logout.addActionListener(new ActionListener()
+	     	{
+	     			public void actionPerformed(ActionEvent e)
+	     			{
+	     				logoutEvent(e);
+	     			}
+	    			
+	    	});
+	        
+	        
+	        
+	        JButton b2 = new JButton("About");
+	        b2.setBounds(50,610,130,30);
+	        b2.setCursor(cur);
+
+	        
+	        b2.addActionListener(new ActionListener()
+         	{
+         			public void actionPerformed(ActionEvent e)
+         			{
+         				b2Event(e);
+         			}
+        			
+         		});
+
+	        
+	        JButton b3 = new JButton("Expert Guidance");
+	        b3.setBounds(50,660,130,30);
+	        b3.setCursor(cur);
+
+	        b3.addActionListener(new ActionListener()
+         	{
+         			public void actionPerformed(ActionEvent e)
+         			{
+         				b3Event(e);
+         			}
+        			
+         		});
+
+	        
+	      //  JLabel logo= new JLabel(icon1);
+	      //  logo.setBounds(-20,110,300,300);
+	           
+	        JLabel label2 = new JLabel(icon2);
+	        label2.setBounds(-20,0,1400,450);
+	             
+	        
+	        JLabel label4 = new JLabel(icon3);
+	        label4.setBounds(840,500,600,300);
+	        
+	        
+	        JLabel label5 = new JLabel(icon4);
+	        label5.setBounds(20,1095,250,250);
+
+	        
+	        
+	        
+	        
+	        JLabel label3 = new JLabel("Bachlor Of Commerce");
+	        label3.setBounds(440,470,700,40); 
+	        Font f2=new Font("copperplate Gothic Bold",Font.PLAIN,30);
+	           label3.setFont(f2);
+	           label3.setForeground(Color.blue);
+	           
+	           
+	           JTextArea a1 = new JTextArea("-The B.Com. Degree Course will consist of three Years."
+                                             +"The \nfirst year annual examination will be held at the"
+	        		                         +"end of \nthe first year. The Second Year"
+                                             +" annual examination \nwill be held at the end of the second year"
+	        		                         +"\n-The Third annual examination shall be"
+                                             +"held at the \nend of the third year."
+	        		                         +"\n \n-A.T.K.T. Rules :"
++"\nAs far as A.T.K.T. is concerned, a student who fails in two"
++"\ntheory and one practical head of passing at F.Y.B.Com may be");
+	           a1.setBorder(null);
+	              a1.setBounds(280,520,640,265); 
+	              Font f3=new Font("Verdana",Font.PLAIN,20);
+	               a1.setFont(f3);
+	              // a1.setForeground(Color.red);
+	               a1.setEditable(false);
+	             
+	           
+	               
+	               JTextArea a2 = new JTextArea("admitted to S.Y.B.Com. likewise a student who fails in the two"
++"theory and one practical head of passing \nat S.Y.B.Com may be" 
++"admitted to T.Y.B.Com. "
++ "\n-But a student passing S.Y.B.Com but fails"
++"in any subject at F.Y.B.Com cannot be admitted to T.Y.B.Com"
+	               		+ "\n \n-Theory and one practical head of passing at S.Y.B.Com may be" 
+                        +"admitted to T.Y.B.Com.But a \nstudent passing S.Y.B.Com but fails"
+                        +"in any subject at F.Y.B.Com cannot be admitted to T.Y.B.Com"
+	               		+ "\n \n-ELIGIBILITY:"
+                        +"\n-No Candidates shall be admitted to enter the First Year of the B.Com. Degree Course unless he/she"
+                        +"\nhas passed the Higher Secondary School Certificate Examination of the Maharashtra State"
+                        +"\nBoard of Higher Secondary Education Board or University with English as a passing subject."
+                        + "\n\n-No candidate shall be admitted to the annual examination of the First year B.Com. unless he/she has"
+                        +"\nsatisfactorily kept two terms for the course at the college at the college affiliated to this University."
+	               	    +"\n\n-No candidate shall be admitted to the annual examination of the First year B.Com. unless he/she has"
+                        +"\nsatisfactorily kept two terms for the course at the college at the college affiliated to this University."
+                        
+                        + "\n\n-No candidate shall be admitted to the Third year of the B.Com. Degree Course unless he/she has" 
+                        +"\npassed in all the papers at the First Year B.Com. Examination and has passed in all the papers at"
+	               	    +"\nthe first Year B.Com. Examination and has satisfactorily kept terms for the second year and also two"
+                        +"\nterms for the third year of B.Com. satisfactorily in a college affiliated to this University.");
+	   	              a2.setBounds(280,790,1050,600); 
+	   	               a2.setFont(f3);
+	   	              // a1.setForeground(Color.red);
+	   	               a2.setEditable(false);
+	   	       
+	   	               
+	   	            JTextArea a3 = new JTextArea("F.Y.B.Com. - "
+	   	            		+ " \n\n-Functional English"
+	   	            		+ " \n\n-Financial Accounting"
+	   	            		+ " \n\n-Business Economic"
+	   	            		+ "\n\n-Mathematics &"
+                            +"Statistics"
+	   	            		+"\n\n-Computer Concepts"
+                            +" & Programming.");
+	   		              a3.setBounds(280,1395,400,340);
+	   		               a3.setFont(f3);
+	   		              // a1.setForeground(Color.red);
+	   		               a3.setEditable(false);
+	   		               
+	   		               
+	   		            JTextArea a4 = new JTextArea("S.Y.B.Com."
+	   		            		+ "\n\n-Business Communication"
+	   		            		+"\n\n-Corporate Accounting"
+	   		            		+"\n\n-Business Economic"
+	   		            		+ "\n\n-Indian and Global"
+                                            +"Economic Development"
+				   		            		+"\n\n-Business Management"
+					   	            		+ "\n\n-Computer Concepts"
+                                            +"\nand Programming.");
+		   		              a4.setBounds(690,1395,400,340);
+		   		               a4.setFont(f3);
+		   		              // a1.setForeground(Color.red);
+		   		               a4.setEditable(false);
+		   		               
+		   		              
+		   		               
+		   		           
+		   		            JTextArea a5 = new JTextArea("T.Y.B.Com"
+		   		            		+"\n\n-Business Regulatory"
+                                    +"\n Framework (M. Law)."
+			   	            		+ "\n\n-Advanced Accounting"
+			   	            		+ "\n\n-International \n Economics"
+					   		            		
+						   	            		+ "\n\n-Auditing and Taxation");
+			   	            	
+                                    // +"\nEconomic Development
+			   		              a5.setBounds(1100,1395,235,340);
+			   		               a5.setFont(f3);
+			   		              // a1.setForeground(Color.red);
+			   		               a5.setEditable(false);
+			   		               
+			   		               
+			   		        //    JTextArea a6 = new JTextArea("
+	   	            	//	+");
+				   		          //    a6.setBounds(280,1570,400,170);
+				   		  //             a6.setFont(f3);
+				   		              // a1.setForeground(Color.red);
+				   		    //           a6.setEditable(false);
+				   		               
+				   		               
+				   		      //      JTextArea a7 = new JTextArea("");
+					   		    //          a7.setBounds(690,1570,400,170);
+					   		      //         a7.setFont(f3);
+					   		              // a1.setForeground(Color.red);
+					   		        //       a7.setEditable(false);
+					   		                       
+				   		           
+					   		               
+					   		               
+					   		   //         JTextArea a8 = new JTextArea("");
+						   		 //             a8.setBounds(1100,1570,235,170);
+						   		   //            a8.setFont(f3);
+						   		              // a1.setForeground(Color.red);
+						   		     //          a8.setEditable(false);
+			   		               
+	               
+	        
+						   		            JButton b4 = new JButton("Take an Aptitude Test >>>");
+						   		         Font f4=new Font("AR JULIAN",Font.BOLD,20);
+						   	            b4.setFont(f4);
+						   	              b4.setBounds(600,1770,300,40);
+						   	            b4.setForeground(Color.red);
+	                                    b4.setCursor(cur);
+	                                    
+	                                    b4.addActionListener(new ActionListener()
+	                                 	{
+	                                 			public void actionPerformed(ActionEvent e)
+	                                 			{
+	                                 				b4Event(e);
+	                                 			}
+	                                			
+	                                 		});
+	                                    
+	           
+	        co.add(label1);
+	        co.add(label2);
+	        co.add(label3);
+	        co.add(label4);
+	        co.add(label5);
+	        co.add(a1);
+	        co.add(a2);
+	        co.add(a3);
+	        co.add(a4);
+	        co.add(a5);
+	      //  co.add(a6);
+	      //  co.add(a7);
+	      //  co.add(a8);
+	      //  co.add(logo);
+	        co.add(b1);
+	        co.add(b2);
+	        co.add(b3);
+	        co.add(b4);
+	        co.add(logout);
+	        frame.getContentPane().add(sp);	        
+}
+	 
+	 public static void b2Event(ActionEvent e)
+	    {
+			About a = new About();
+		    a.setVisible(true);
+		       	
+		}
+		
+		public static void b1Event(ActionEvent e)
+	    {
+			Home h = new Home();
+		    h.setVisible(true);
+		       	
+		}
+	 
+	 public static void b3Event(ActionEvent e)
+	    {
+			EG eg = new EG();
+		    eg.setVisible(true);
+		       	
+		}
+	 
+	 public static void logoutEvent(ActionEvent e)
+	    {
+			Login l = new Login();
+		    l.setVisible(true);
+		       	
+		}
+	 
+	 
+	 public static void b4Event(ActionEvent e)
+	    {
+		   
+		 TabbedPane tp = new TabbedPane();
+		    tp.setVisible(true);
+		}
+	 
+	 
+	 public void setVisible(boolean b)
+	   {
+		   this.setVisible(true);
+	   }
+}
+package code;
+
+
+import java.awt.event.ActionEvent;
+//import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.Color;
+import java.awt.Cursor;
+import java.awt.Dimension;
+import java.awt.EventQueue;
+import java.awt.Font;
+import javax.swing.*;
+
+public class bcom extends JFrame
+{
+	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	static JFrame f1;
+
+	public static void main(String[] args) {
+        EventQueue.invokeLater(new Runnable() {
+            @SuppressWarnings("static-access")
+			public void run() {
+                try {
+                    bcom window = new bcom();
+                    window.f1.setVisible(true);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+        });
+    }
+	 public bcom() {
+	        initialize();
+	    }
+
+	 private void initialize()
+	 {
+
+	        JFrame frame=new JFrame();
+	        frame.setVisible(true);
+	        //frame.setSize(800,600);
+	        //frame.setLocation(200,50);
+	        frame.setBounds(-10,0,1800,740);
+	        frame.setTitle("Career World --Way To Success");
+	        ImageIcon icon=new ImageIcon("C:\\Users\\TAK\\workspace\\CareerWorld\\src\\image\\PicsArt_1485415453700.png");
+	      //  ImageIcon icon1=new ImageIcon("C:\\Users\\TAK\\workspace\\CareerWorld\\PicsArt_1485415453700.png");
+	        ImageIcon icon2=new ImageIcon("C:\\Users\\TAK\\workspace\\CareerWorld\\src\\image\\Bachelors-Degree-Headers-900-BOCA.jpg");
+	        ImageIcon icon3=new ImageIcon("C:\\Users\\TAK\\workspace\\CareerWorld\\src\\image\\Career-BCom1.jpg");
+	        ImageIcon icon4=new ImageIcon("C:\\Users\\TAK\\workspace\\CareerWorld\\src\\image\\B.com-Course.jpg");
+	        ImageIcon icon5=new ImageIcon("C:\\Users\\TAK\\workspace\\CareerWorld\\src\\image\\ca7b81256d27f757790508035a8177c0.png");
+	        ImageIcon icon6=new ImageIcon("C:\\Users\\TAK\\workspace\\CareerWorld\\src\\image\\images(1).jpg");
+	        
+	        frame.setIconImage(icon.getImage());
+	        
+	        
+	        
+	        JPanel co = new JPanel();
+	        co.setLayout(null);
+	        //co.setBackground(Color.blue);
+	        JScrollPane sp = new JScrollPane(co);
+	        co.setPreferredSize(new Dimension(100, 1850));
+
+	    
+	        
+	        
+	        JLabel label1 = new JLabel("DashBoard");
+	        label1.setBounds(50,470,300,50); 
+	        Font f1=new Font("Arial",Font.BOLD,30);
+	         label1.setFont(f1);
+	        
+	        JButton b1 = new JButton(icon5);
+	        b1.setBounds(75,520,80,80);
+	        Cursor cur = new Cursor(Cursor.HAND_CURSOR);
+	        b1.setCursor(cur);
+	        
+	        
+	        b1.addActionListener(new ActionListener()
+         	{
+         			public void actionPerformed(ActionEvent e)
+         			{
+         				b1Event(e);
+         			}
+        			
+         		});
+
+	        JButton logout = new JButton(icon6);
+   	        logout.setBounds(75,700,80,80);
+   	       
+   	        logout.setCursor(cur);
+   	        
+   	     logout.addActionListener(new ActionListener()
+	     	{
+	     			public void actionPerformed(ActionEvent e)
+	     			{
+	     				logoutEvent(e);
+	     			}
+	    			
+	    	});
+	        
+	        
+	        
+	        JButton b2 = new JButton("About");
+	        b2.setBounds(50,610,130,30);
+	        b2.setCursor(cur);
+
+	        
+	        b2.addActionListener(new ActionListener()
+         	{
+         			public void actionPerformed(ActionEvent e)
+         			{
+         				b2Event(e);
+         			}
+        			
+         		});
+
+	        
+	        JButton b3 = new JButton("Expert Guidance");
+	        b3.setBounds(50,660,130,30);
+	        b3.setCursor(cur);
+
+	        b3.addActionListener(new ActionListener()
+         	{
+         			public void actionPerformed(ActionEvent e)
+         			{
+         				b3Event(e);
+         			}
+        			
+         		});
+
+	        
+	      //  JLabel logo= new JLabel(icon1);
+	      //  logo.setBounds(-20,110,300,300);
+	           
+	        JLabel label2 = new JLabel(icon2);
+	        label2.setBounds(-20,0,1400,450);
+	             
+	        
+	        JLabel label4 = new JLabel(icon3);
+	        label4.setBounds(840,500,600,300);
+	        
+	        
+	        JLabel label5 = new JLabel(icon4);
+	        label5.setBounds(20,1095,250,250);
+
+	        
+	        
+	        
+	        
+	        JLabel label3 = new JLabel("Bachlor Of Commerce");
+	        label3.setBounds(440,470,700,40); 
+	        Font f2=new Font("copperplate Gothic Bold",Font.PLAIN,30);
+	           label3.setFont(f2);
+	           label3.setForeground(Color.blue);
+	           
+	           
+	           JTextArea a1 = new JTextArea("-The B.Com. Degree Course will consist of three Years."
+                                             +"The \nfirst year annual examination will be held at the"
+	        		                         +"end of \nthe first year. The Second Year"
+                                             +" annual examination \nwill be held at the end of the second year"
+	        		                         +"\n-The Third annual examination shall be"
+                                             +"held at the \nend of the third year."
+	        		                         +"\n \n-A.T.K.T. Rules :"
++"\nAs far as A.T.K.T. is concerned, a student who fails in two"
++"\ntheory and one practical head of passing at F.Y.B.Com may be");
+	           a1.setBorder(null);
+	              a1.setBounds(280,520,640,265); 
+	              Font f3=new Font("Verdana",Font.PLAIN,20);
+	               a1.setFont(f3);
+	              // a1.setForeground(Color.red);
+	               a1.setEditable(false);
+	             
+	           
+	               
+	               JTextArea a2 = new JTextArea("admitted to S.Y.B.Com. likewise a student who fails in the two"
++"theory and one practical head of passing \nat S.Y.B.Com may be" 
++"admitted to T.Y.B.Com. "
++ "\n-But a student passing S.Y.B.Com but fails"
++"in any subject at F.Y.B.Com cannot be admitted to T.Y.B.Com"
+	               		+ "\n \n-Theory and one practical head of passing at S.Y.B.Com may be" 
+                        +"admitted to T.Y.B.Com.But a \nstudent passing S.Y.B.Com but fails"
+                        +"in any subject at F.Y.B.Com cannot be admitted to T.Y.B.Com"
+	               		+ "\n \n-ELIGIBILITY:"
+                        +"\n-No Candidates shall be admitted to enter the First Year of the B.Com. Degree Course unless he/she"
+                        +"\nhas passed the Higher Secondary School Certificate Examination of the Maharashtra State"
+                        +"\nBoard of Higher Secondary Education Board or University with English as a passing subject."
+                        + "\n\n-No candidate shall be admitted to the annual examination of the First year B.Com. unless he/she has"
+                        +"\nsatisfactorily kept two terms for the course at the college at the college affiliated to this University."
+	               	    +"\n\n-No candidate shall be admitted to the annual examination of the First year B.Com. unless he/she has"
+                        +"\nsatisfactorily kept two terms for the course at the college at the college affiliated to this University."
+                        
+                        + "\n\n-No candidate shall be admitted to the Third year of the B.Com. Degree Course unless he/she has" 
+                        +"\npassed in all the papers at the First Year B.Com. Examination and has passed in all the papers at"
+	               	    +"\nthe first Year B.Com. Examination and has satisfactorily kept terms for the second year and also two"
+                        +"\nterms for the third year of B.Com. satisfactorily in a college affiliated to this University.");
+	   	              a2.setBounds(280,790,1050,600); 
+	   	               a2.setFont(f3);
+	   	              // a1.setForeground(Color.red);
+	   	               a2.setEditable(false);
+	   	       
+	   	               
+	   	            JTextArea a3 = new JTextArea("F.Y.B.Com. - "
+	   	            		+ " \n\n-Functional English"
+	   	            		+ " \n\n-Financial Accounting"
+	   	            		+ " \n\n-Business Economic"
+	   	            		+ "\n\n-Mathematics &"
+                            +"Statistics"
+	   	            		+"\n\n-Computer Concepts"
+                            +" & Programming.");
+	   		              a3.setBounds(280,1395,400,340);
+	   		               a3.setFont(f3);
+	   		              // a1.setForeground(Color.red);
+	   		               a3.setEditable(false);
+	   		               
+	   		               
+	   		            JTextArea a4 = new JTextArea("S.Y.B.Com."
+	   		            		+ "\n\n-Business Communication"
+	   		            		+"\n\n-Corporate Accounting"
+	   		            		+"\n\n-Business Economic"
+	   		            		+ "\n\n-Indian and Global"
+                                            +"Economic Development"
+				   		            		+"\n\n-Business Management"
+					   	            		+ "\n\n-Computer Concepts"
+                                            +"\nand Programming.");
+		   		              a4.setBounds(690,1395,400,340);
+		   		               a4.setFont(f3);
+		   		              // a1.setForeground(Color.red);
+		   		               a4.setEditable(false);
+		   		               
+		   		              
+		   		               
+		   		           
+		   		            JTextArea a5 = new JTextArea("T.Y.B.Com"
+		   		            		+"\n\n-Business Regulatory"
+                                    +"\n Framework (M. Law)."
+			   	            		+ "\n\n-Advanced Accounting"
+			   	            		+ "\n\n-International \n Economics"
+					   		            		
+						   	            		+ "\n\n-Auditing and Taxation");
+			   	            	
+                                    // +"\nEconomic Development
+			   		              a5.setBounds(1100,1395,235,340);
+			   		               a5.setFont(f3);
+			   		              // a1.setForeground(Color.red);
+			   		               a5.setEditable(false);
+			   		               
+			   		               
+			   		        //    JTextArea a6 = new JTextArea("
+	   	            	//	+");
+				   		          //    a6.setBounds(280,1570,400,170);
+				   		  //             a6.setFont(f3);
+				   		              // a1.setForeground(Color.red);
+				   		    //           a6.setEditable(false);
+				   		               
+				   		               
+				   		      //      JTextArea a7 = new JTextArea("");
+					   		    //          a7.setBounds(690,1570,400,170);
+					   		      //         a7.setFont(f3);
+					   		              // a1.setForeground(Color.red);
+					   		        //       a7.setEditable(false);
+					   		                       
+				   		           
+					   		               
+					   		               
+					   		   //         JTextArea a8 = new JTextArea("");
+						   		 //             a8.setBounds(1100,1570,235,170);
+						   		   //            a8.setFont(f3);
+						   		              // a1.setForeground(Color.red);
+						   		     //          a8.setEditable(false);
+			   		               
+	               
+	        
+						   		            JButton b4 = new JButton("Take an Aptitude Test >>>");
+						   		         Font f4=new Font("AR JULIAN",Font.BOLD,20);
+						   	            b4.setFont(f4);
+						   	              b4.setBounds(600,1770,300,40);
+						   	            b4.setForeground(Color.red);
+	                                    b4.setCursor(cur);
+	                                    
+	                                    b4.addActionListener(new ActionListener()
+	                                 	{
+	                                 			public void actionPerformed(ActionEvent e)
+	                                 			{
+	                                 				b4Event(e);
+	                                 			}
+	                                			
+	                                 		});
+	                                    
+	           
+	        co.add(label1);
+	        co.add(label2);
+	        co.add(label3);
+	        co.add(label4);
+	        co.add(label5);
+	        co.add(a1);
+	        co.add(a2);
+	        co.add(a3);
+	        co.add(a4);
+	        co.add(a5);
+	      //  co.add(a6);
+	      //  co.add(a7);
+	      //  co.add(a8);
+	      //  co.add(logo);
+	        co.add(b1);
+	        co.add(b2);
+	        co.add(b3);
+	        co.add(b4);
+	        co.add(logout);
+	        frame.getContentPane().add(sp);	        
+}
+	 
+	 public static void b2Event(ActionEvent e)
+	    {
+			About a = new About();
+		    a.setVisible(true);
+		       	
+		}
+		
+		public static void b1Event(ActionEvent e)
+	    {
+			Home h = new Home();
+		    h.setVisible(true);
+		       	
+		}
+	 
+	 public static void b3Event(ActionEvent e)
+	    {
+			EG eg = new EG();
+		    eg.setVisible(true);
+		       	
+		}
+	 
+	 public static void logoutEvent(ActionEvent e)
+	    {
+			Login l = new Login();
+		    l.setVisible(true);
+		       	
+		}
+	 
+	 
+	 public static void b4Event(ActionEvent e)
+	    {
+		   
+		 TabbedPane tp = new TabbedPane();
+		    tp.setVisible(true);
+		}
+	 
+	 
+	 public void setVisible(boolean b)
+	   {
+		   this.setVisible(true);
+	   }
+}
+package code;
+
+
+
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.*;
+import javax.swing.Timer;
+import java.util.*;
+class  apti3 extends JFrame implements ActionListener
+{
+            /**
+             * 
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+			JPanel panel;
+            JPanel panelresult;
+            JRadioButton choice1;
+            JRadioButton choice2;
+            JRadioButton choice3;
+            JRadioButton choice4;
+            ButtonGroup bg;
+            JLabel lblmess;
+            JButton btnext;
+            String[][] qpa;
+            String[][] qca;
+            int qaid;
+            private Timer tim;
+            private int t;
+            private JLabel lb2;
+            HashMap<Integer, String> map;
+            
+            
+           
+                
+
+           public apti3()
+           {
+                      initializedata();
+                      setTitle("Career World --Way To Success");
+                      setDefaultCloseOperation(EXIT_ON_CLOSE);
+                      setBounds(-10,0,1800,740);
+                    
+                      
+                      Container cont=getContentPane();
+                      cont.setLayout(null); 
+                      
+                     
+                      ImageIcon icon=new ImageIcon("C:\\Users\\TAK\\workspace\\CareerWorld\\src\\image\\PicsArt_1485415453700.png");
+                      ImageIcon icon1=new ImageIcon("C:\\Users\\TAK\\workspace\\CareerWorld\\src\\image\\gfdt.jpg");
+                      ImageIcon icon2=new ImageIcon("C:\\Users\\TAK\\workspace\\CareerWorld\\src\\image\\aptitude-test.jpg");
+                      
+             
+                      
+                     setIconImage(icon.getImage());
+                      
+                     
+                    bg=new ButtonGroup();      
+                    choice1=new JRadioButton("Choice1",true);
+                    choice2=new JRadioButton("Choice2",false);
+                    choice3=new JRadioButton("Choice3",false);
+                    choice4=new JRadioButton("Choice4",false);
+                    bg.add(choice1);
+                    bg.add(choice2);
+                    bg.add(choice3);
+                    bg.add(choice4);
+                   lblmess=new JLabel("Choose a correct anwswer");
+                    lblmess.setForeground(Color.BLUE);
+                   lblmess.setFont(new Font("AR JULIAN", Font.BOLD, 20));
+           
+                  
+                   
+                  
+       	        
+       	  
+             JLabel l1 = new JLabel(icon1);
+ 	        l1.setBounds(-20,-50,1400,450);
+             
+             JLabel l2=new JLabel(icon2);
+             l2.setBounds(1000,300,350,330);
+             
+             
+             panel=new JPanel();
+             panel.setBackground(Color.white);
+             panel.setBounds(380,300,600,400);
+         
+
+       	     
+       	     
+       	     
+                   
+                    btnext=new JButton("Next");
+                    
+                    btnext.setForeground(Color.red);
+                    btnext.setFont(new Font("AR JULIAN", Font.PLAIN, 20));
+                    btnext.setBorder(null);
+                 //   btnext.setBounds(300,340,200,50);
+                  
+                    btnext.addActionListener(new ActionListener(){
+                    public void actionPerformed(ActionEvent e){
+                        
+                        t=10;
+                        lb2.setText(String.valueOf(t));
+                        tim.start();
+                       
+                           if(btnext.getText().equals("Next")){
+                                                if(qaid<14){
+                                                            
+                                                            map.put(qaid,getSelection());
+                                                            qaid++;
+                                                            readqa(qaid);
+                                                            }
+                                                else {
+                                                            map.put(qaid,getSelection());
+                                                          
+                                                            btnext.setText("Last Question after 10 sec it will be directed to Result >>>");
+                                                            btnext.setEnabled(false);
+                                                         }
+                                                }
+                                   // else if(btnext.getText().equals("Result >>>"))
+                                     //           new Report();
+                          
+                        }
+                    });
+
+                    
+                    
+                    t=10;
+
+                  //Taimer
+                  lb2=new JLabel("10");
+                  lb2.setBounds(150,450,80,80);
+                 Font f1=new Font("Algerian",Font.BOLD,80);
+     	         lb2.setFont(f1);
+     	         lb2.setForeground(Color.red);
+     	         
+                  tim=new Timer(1000,new ActionListener(){
+                      @Override
+                      public void actionPerformed(ActionEvent e){
+                          if(t>0){
+                          t--;
+                          lb2.setText(String.valueOf(t));
+                          }else{
+                              tim.stop();
+                              
+                              JOptionPane.showMessageDialog(null, "Time's up");
+                              
+                              t=10;
+                              lb2.setText(String.valueOf(t));
+                              tim.start();
+                              
+                             
+                              
+                              if(qaid<14){
+                                  
+                                  map.put(qaid,getSelection());
+                                  qaid++;
+                                  readqa(qaid);
+                                  }
+                      else {
+                                  map.put(qaid,getSelection());
+                                  btnext.setText("Result >>>");
+                                  new Report();
+                                  setVisible(false);
+                                tim.stop();
+                               }
+                         
+                           
+                             
+                             
+                              } 
+        
+                          
+                          }
+                      });
+                  
+                  t=10;
+
+                  //Taimer
+                  lb2=new JLabel("10");
+                  lb2.setBounds(150,450,80,80);
+                 
+     	         lb2.setFont(f1);
+     	         lb2.setForeground(Color.red);
+     	         
+                 
+                     
+                      
+                          if(t>0)
+                          {
+                          t--;
+                          lb2.setText(String.valueOf(t));
+                          }
+                          else
+                          {
+                              tim.stop();
+                              
+                          }
+                   
+                    
+                    
+                   
+                    panel.setLayout(new GridLayout(6,2));
+                   panel.add(lblmess);
+                    panel.add(choice1);
+                    panel.add(choice2);
+                    panel.add(choice3);
+                    panel.add(choice4);
+                    panel.add(btnext);
+                    cont.add(lb2);
+                    cont.add(panel);
+                   cont.add(l1);
+                   cont.add(l2);
+                 
+                   
+                    qaid=0;
+                    readqa(qaid);
+        
+                    
+                    
+                    tim.start();
+                    setVisible(true);
+            }
+           
+           
+               
+        public void initializedata(){
+                        //qpa stores pairs of question and its possible answers
+                        qpa=new String[15][5];
+
+                        qpa[0][0]="An aircraft gas turbine operates on";
+                        qpa[0][1]="Otto cycle";
+                        qpa[0][2]="Sterling cycle";
+                        qpa[0][3]="Rankine cycle";
+                        qpa[0][4]="Bryton cycle";
+
+                        qpa[1][0]="Which of the following is not used as a refrigerant?";
+                        qpa[1][1]="carbon monoxide";
+                        qpa[1][2]="carbon dioxide";
+                        qpa[1][3]="amonia";
+                        qpa[1][4]="sulphur dioxide";
+                        
+                        qpa[2][0]="Quick return motion is used in a";
+                        qpa[2][1]="drilling";
+                        qpa[2][2]="shaper";
+                        qpa[2][3]="lathe";
+                        qpa[2][4]="grinder";
+
+                        qpa[3][0]="A refigerant used in the domestic refrigerator is";
+                        qpa[3][1]="air";
+                        qpa[3][2]="Sulphur dioxide";
+                        qpa[3][3]="freon";
+                        qpa[3][4]="methane";
+
+                        qpa[4][0]="In Industry of the developed nations the type of production most often occurring is ";
+                        qpa[4][1]="Batch production";
+                        qpa[4][2]="Single lot production";
+                        qpa[4][3]="Mass production";
+                        qpa[4][4]="Create lot production";
+
+                        qpa[5][0]="Draft on a pattern is provided for";
+                        qpa[5][1]="facilitating pattern making";
+                        qpa[5][2]="easy lifting of the casting";
+                        qpa[5][3]="facilitating withdrawal of the pattern from the mould";
+                        qpa[5][4]="providing for strinkage of the casting";
+
+                        qpa[6][0]="Which of the following operations cannot be performed on a lathe";
+                        qpa[6][1]="slotting";
+                        qpa[6][2]="facing";
+                        qpa[6][3]="drilling";
+                        qpa[6][4]="thread cutting";
+
+                        qpa[7][0]="Feed in a lathe is expressed in";
+                        qpa[7][1]="mm per degree";
+                        qpa[7][2]="rpm";
+                        qpa[7][3]="mm per revolution";
+                        qpa[7][4]="mm";
+
+                        qpa[8][0]="Sprue is the passing provided for the";
+                        qpa[8][1]="outflow";
+                        qpa[8][2]="smooth flow";
+                        qpa[8][3]="solidification of the molten material";
+                        qpa[8][4]="inflow";
+
+                        qpa[9][0]="The operation of enlarging of a hole is called";
+                        qpa[9][1]="boring";
+                        qpa[9][2]="drilling";
+                        qpa[9][3]="reaming";
+                        qpa[9][4]="counter sinking";
+                        
+                        qpa[10][0]="Rapping allowance is provided on a pattern to take care of";
+                        qpa[10][1]="shrinkage";
+                        qpa[10][2]="machining";
+                        qpa[10][3]="distortion";
+                        qpa[10][4]="easy withdrawl";
+
+                        qpa[11][0]="Mandrels are used to hold";
+                        qpa[11][1]="face plate";
+                        qpa[11][2]="cutting tools";
+                        qpa[11][3]="hollow work pieces";
+                        qpa[11][4]="drill bits";
+                        
+                        qpa[12][0]="Brasses and bronzes are welded using";
+                        qpa[12][1]="neutral flame";
+                        qpa[12][2]="oxidizing flames";
+                        qpa[12][3]="reducing flame";
+                        qpa[12][4]="carburising flame";
+
+                        qpa[13][0]="Upsetting is the term used in one of the following operations";
+                        qpa[13][1]="forging";
+                        qpa[13][2]="drilling";
+                        qpa[13][3]="turning";
+                        qpa[13][4]="casting";
+
+                        qpa[14][0]="Reducing flame is obtained in oxyactetylane welding with";
+                        qpa[14][1]="equal parts of both gases";
+                        qpa[14][2]="excess oxygen";
+                        qpa[14][3]="excess of acetylene";
+                        qpa[14][4]="reduced acetylene";
+
+                                               
+                       
+                        
+                        //qca stores pairs of question and its correct answer
+                        qca=new String[15][2];
+                        
+                        qca[0][0]="An aircraft gas turbine operates on";
+                        qca[0][1]="Bryton cycle";
+
+                        qca[1][0]="Which of the following is not used as a refrigerant?";
+                        qca[1][1]="carbon monoxide ";
+
+                        qca[2][0]="Quick return motion is used in a";
+                        qca[2][1]=" shaper";
+
+                        qca[3][0]="A refigerant used in the domestic refrigerator is";
+                        qca[3][1]="freon";
+
+
+                        qca[4][0]="In Industry of the developed nations the type of production most often occurring is";
+                        qca[4][1]="Batch production";
+
+                        qca[5][0]="Draft on a pattern is provided for";
+                        qca[5][1]="providing for strinkage of the casting";
+
+                        qca[6][0]="Which of the following operations cannot be performed on a lathe";
+                        qca[6][1]="slotting";
+                        
+                        qca[7][0]="Feed in a lathe is expressed in";
+                        qca[7][1]="mm per revolution";
+                        
+                        qca[8][0]="Sprue is the passing provided for the";
+                        qca[8][1]="inflow";
+
+                        qca[9][0]="The operation of enlarging of a hole is called";
+                        qca[9][1]="boring";
+                        
+                        qca[10][0]="Rapping allowance is provided on a pattern to take care of";
+                        qca[10][1]="easy withdrawl";
+
+                        qca[11][0]="Mandrels are used to hold";
+                        qca[11][1]="hollow work pieces";
+
+                        qca[12][0]="Brasses and bronzes are welded using";
+                        qca[12][1]="neutral flame";
+
+                        qca[13][0]="Upsetting is the term used in one of the following operations";
+                        qca[13][1]="forging";
+
+
+                        qca[14][0]="Reducing flame is obtained in oxyactetylane welding with";
+                        qca[14][1]="excess of acetylene";
+
+                       
+
+                      
+
+                        
+                        //create a map object to store pairs of question and selected answer
+                        map=new HashMap<Integer, String>();
+                        
+                        }
+        public String getSelection(){
+                        String selectedChoice=null;
+                        Enumeration<AbstractButton> buttons=bg.getElements();  
+                        while(buttons.hasMoreElements())  
+                        {  
+                        JRadioButton temp=(JRadioButton)buttons.nextElement();  
+                        if(temp.isSelected())  
+                                    {  
+                                                selectedChoice=temp.getText();
+                                    }  
+                         }   
+                        return(selectedChoice);
+            }
+
+
+        public void readqa(int qid){
+                        lblmess.setText("  "+qpa[qid][0]);
+                        choice1.setText(qpa[qid][1]);
+                        choice2.setText(qpa[qid][2]);
+                        choice3.setText(qpa[qid][3]);
+                        choice4.setText(qpa[qid][4]);
+                        choice1.setSelected(true); 
+            }
+        public void reset(){
+                        qaid=0;
+                        map.clear();
+                        readqa(qaid);
+                        btnext.setText("Next");
+                        }
+        public int calCorrectAnswer(){
+                        int qnum=15;
+                        int count=0;
+                        for(int qid=0;qid<qnum;qid++)
+                                    if(qca[qid][1].equals(map.get(qid))) count++;
+                        return count;
+            }
+        
+        
+        
+        
+        
+        
+
+        public class Report extends JFrame
+        {
+        	
+        	
+        
+        	 /**
+			 * 
+			 */
+			private static final long serialVersionUID = 1L;
+
+
+			public Report() {
+        		 
+                
+                                   setTitle("Career World --Way To Success");
+                                   setBounds(-10,0,1800,740);
+                                   setBackground(Color.WHITE);
+                                 // setLayout(new FlowLayout());
+                                    
+                                    ImageIcon icon=new ImageIcon("PicsArt_1485415453700.png");
+                                                                     
+                                    setIconImage(icon.getImage());
+           
+                                   
+                        	                                 		
+               
+                                    addWindowListener(new WindowAdapter(){
+                                                            public void windowClosing(WindowEvent e){
+                                                                        dispose();
+                                                                        reset();
+                                                            }
+                                                });
+                                    
+                                   
+                                    
+                                    
+                                    Draw d=new Draw();                                   
+                                   add(d);
+                                   
+                                   setVisible(true);
+                                  
+                            
+                       	        
+                                   
+                                    }
+                        
+                        
+                  class Draw extends Canvas
+                  {
+                	  
+                	  private static final long serialVersionUID = 1L;
+                	  
+                	  public void paint(Graphics g)
+                	  {
+                                                int qnum=15;
+                                                int x=10;
+                                                int y=20;
+                                               
+                                             
+                                                for(int i=0;i<qnum;i++){
+                                                	
+                                                	   
+                                                            //print the 1st column
+                                                            g.setFont(new Font("Arial",Font.BOLD,15));                                          
+                                                            g.drawString(i+1+". "+qca[i][0], x,y);
+                                                            y+=25;            
+                                                            g.setFont(new Font("Arial",Font.PLAIN,12));                              
+                                                            g.drawString("      Correct answer:"+qca[i][1], x,y);
+                                                            y+=25;
+                                                            g.drawString("      Your answer:"+map.get(i), x,y);
+                                                            y+=25;
+                                                            //print the 2nd column
+                                                           if(y>600) 
+                                                           {
+                                                        	   
+                                                         	y=25;
+                                                             x=450;
+                                                            }
+                                                          
+                                                         
+
+                                                           
+                                                           
+                                                  	   
+                                                           
+                                                           
+                                                            
+                                                }
+                                                
+                                                //Show number of correct answers
+                                                int numc=calCorrectAnswer();
+                                                g.setColor(Color.BLUE);
+                                                g.setFont(new Font("Arial",Font.BOLD,20));
+                                                g.drawString("Number of correct answers:"+numc,500,650);
+                        
+                                            
+                                    }   
+                        }
+                                    
+            }
+
+
+
+
+
+
+
+		@Override
+		public void actionPerformed(ActionEvent arg0) {
+			// TODO Auto-generated method stub
+			
+		}
+}
+        public class aptimech{
+        	  
+
+        public static void main(String args[])
+        {
+                     new apti3();
+                     
+             	
+        }
+
+		public void setVisible(boolean b) {
+			// TODO Auto-generated method stub
+			this.setVisible(true);
+		}
+
+		
+}
+
+            
+
+package code;
+
+
+
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.*;
+import javax.swing.Timer;
+import java.util.*;
+class  apti2 extends JFrame implements ActionListener
+{
+            /**
+             * 
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+			JPanel panel;
+            JPanel panelresult;
+            JRadioButton choice1;
+            JRadioButton choice2;
+            JRadioButton choice3;
+            JRadioButton choice4;
+            ButtonGroup bg;
+            JLabel lblmess;
+            JButton btnext;
+            String[][] qpa;
+            String[][] qca;
+            int qaid;
+            private Timer tim;
+            private int t;
+            private JLabel lb2;
+            HashMap<Integer, String> map;
+            
+            
+           
+                
+
+           public apti2()
+           {
+                      initializedata();
+                      setTitle("Career World --Way To Success");
+                      setDefaultCloseOperation(EXIT_ON_CLOSE);
+                      setBounds(-10,0,1800,740);
+                    
+                      
+                      Container cont=getContentPane();
+                      cont.setLayout(null); 
+                      
+                     
+                      ImageIcon icon=new ImageIcon("C:\\Users\\TAK\\workspace\\CareerWorld\\src\\image\\PicsArt_1485415453700.png");
+                      ImageIcon icon1=new ImageIcon("C:\\Users\\TAK\\workspace\\CareerWorld\\src\\image\\gfdt.jpg");
+                      ImageIcon icon2=new ImageIcon("C:\\Users\\TAK\\workspace\\CareerWorld\\src\\image\\aptitude-test.jpg");
+                      
+             
+                      
+                     setIconImage(icon.getImage());
+                      
+                     
+                    bg=new ButtonGroup();      
+                    choice1=new JRadioButton("Choice1",true);
+                    choice2=new JRadioButton("Choice2",false);
+                    choice3=new JRadioButton("Choice3",false);
+                    choice4=new JRadioButton("Choice4",false);
+                    bg.add(choice1);
+                    bg.add(choice2);
+                    bg.add(choice3);
+                    bg.add(choice4);
+                   lblmess=new JLabel("Choose a correct anwswer");
+                    lblmess.setForeground(Color.BLUE);
+                   lblmess.setFont(new Font("AR JULIAN", Font.BOLD, 20));
+           
+                  
+                   
+                  
+       	        
+       	  
+             JLabel l1 = new JLabel(icon1);
+ 	        l1.setBounds(-20,-50,1400,450);
+             
+             JLabel l2=new JLabel(icon2);
+             l2.setBounds(1000,300,350,330);
+             
+             
+             panel=new JPanel();
+             panel.setBackground(Color.white);
+             panel.setBounds(380,300,600,400);
+         
+
+       	     
+       	     
+       	     
+                   
+                    btnext=new JButton("Next");
+                    
+                    btnext.setForeground(Color.red);
+                    btnext.setFont(new Font("AR JULIAN", Font.PLAIN, 20));
+                    btnext.setBorder(null);
+                 //   btnext.setBounds(300,340,200,50);
+                  
+                    btnext.addActionListener(new ActionListener(){
+                    public void actionPerformed(ActionEvent e){
+                        
+                        t=10;
+                        lb2.setText(String.valueOf(t));
+                        tim.start();
+                       
+                           if(btnext.getText().equals("Next")){
+                                                if(qaid<14){
+                                                            
+                                                            map.put(qaid,getSelection());
+                                                            qaid++;
+                                                            readqa(qaid);
+                                                            }
+                                                else {
+                                                            map.put(qaid,getSelection());
+                                                          
+                                                            btnext.setText("Last Question after 10 sec it will be directed to Result >>>");
+                                                            btnext.setEnabled(false);
+                                                         }
+                                                }
+                                   // else if(btnext.getText().equals("Result >>>"))
+                                     //           new Report();
+                          
+                        }
+                    });
+
+                    
+                    
+                    t=10;
+
+                  //Taimer
+                  lb2=new JLabel("10");
+                  lb2.setBounds(150,450,80,80);
+                 Font f1=new Font("Algerian",Font.BOLD,80);
+     	         lb2.setFont(f1);
+     	         lb2.setForeground(Color.red);
+     	         
+                  tim=new Timer(1000,new ActionListener(){
+                      @Override
+                      public void actionPerformed(ActionEvent e){
+                          if(t>0){
+                          t--;
+                          lb2.setText(String.valueOf(t));
+                          }else{
+                              tim.stop();
+                              
+                              JOptionPane.showMessageDialog(null, "Time's up");
+                              
+                              t=10;
+                              lb2.setText(String.valueOf(t));
+                              tim.start();
+                              
+                             
+                              
+                              if(qaid<14){
+                                  
+                                  map.put(qaid,getSelection());
+                                  qaid++;
+                                  readqa(qaid);
+                                  }
+                      else {
+                                  map.put(qaid,getSelection());
+                                  btnext.setText("Result >>>");
+                                  new Report();
+                                  setVisible(false);
+                                tim.stop();
+                               }
+                         
+                           
+                             
+                             
+                              } 
+        
+                          
+                          }
+                      });
+                  
+                  t=10;
+
+                  //Taimer
+                  lb2=new JLabel("10");
+                  lb2.setBounds(150,450,80,80);
+                 
+     	         lb2.setFont(f1);
+     	         lb2.setForeground(Color.red);
+     	         
+                 
+                     
+                      
+                          if(t>0)
+                          {
+                          t--;
+                          lb2.setText(String.valueOf(t));
+                          }
+                          else
+                          {
+                              tim.stop();
+                              
+                          }
+                   
+                    
+                    
+                   
+                    panel.setLayout(new GridLayout(6,2));
+                   panel.add(lblmess);
+                    panel.add(choice1);
+                    panel.add(choice2);
+                    panel.add(choice3);
+                    panel.add(choice4);
+                    panel.add(btnext);
+                    cont.add(lb2);
+                    cont.add(panel);
+                   cont.add(l1);
+                   cont.add(l2);
+                 
+                   
+                    qaid=0;
+                    readqa(qaid);
+        
+                    
+                    
+                    tim.start();
+                    setVisible(true);
+            }
+           
+           
+               
+        public void initializedata(){
+                        //qpa stores pairs of question and its possible answers
+                        qpa=new String[15][5];
+
+                        qpa[0][0]="In a mortar, the binding material is_______";
+                        qpa[0][1]="Cement";
+                        qpa[0][2]="Sand";
+                        qpa[0][3]="Surkhi";
+                        qpa[0][4]="Cinder";
+
+                        qpa[1][0]="Lacquer paints__";
+                        qpa[1][1]="are generally applied on structural steel";
+                        qpa[1][2]="are less durable as compared to enamel paints";
+                        qpa[1][3]="consist of resin and nitro-cellulose";
+                        qpa[1][4]="all the above";
+                        
+                        qpa[2][0]="Wrought iron contains carbon upto";
+                        qpa[2][1]="0.25%";
+                        qpa[2][2]="1.0%";
+                        qpa[2][3]="1.5%";
+                        qpa[2][4]="2%";
+
+                        qpa[3][0]="Pick up the polymineralic rock from the following:";
+                        qpa[3][1]="Quartz sand";
+                        qpa[3][2]="Pure gypsum";
+                        qpa[3][3]="Magnesite";
+                        qpa[3][4]="Granite";
+
+                        qpa[4][0]="Pick up the correct statement from the following:";
+                        qpa[4][1]="For thin structures subjected to wetting and drying, the water cement ratio should be 0.45";
+                        qpa[4][2]="For mass concrete structures subjected to wetting and drying, the water ratio should be 0.55";
+                        qpa[4][3]="For thin structures which remain continuously under water, the water-cement ratio by weight should be 0.55";
+                        qpa[4][4]="All the above";
+
+                        qpa[5][0]="Hydrographic surveys deal with the mapping of";
+                        qpa[5][1]="large water bodies";
+                        qpa[5][2]="heavenly bodies";
+                        qpa[5][3]="mountaineous region";
+                        qpa[5][4]="canal system";
+
+                        qpa[6][0]="An ideal vertical curve to join two gradients, is ";
+                        qpa[6][1]="Circular";
+                        qpa[6][2]="Parabolic";
+                        qpa[6][3]="Elliptical";
+                        qpa[6][4]="None of these.";
+
+                        qpa[7][0]="Pick up the correct statement from the following :";
+                        qpa[7][1]="the eyepiece plays no part in defining the line of sight";
+                        qpa[7][2]="the diaphragm plays no part in defining the line of sight";
+                        qpa[7][3]="the optical centre of the objective plays no part in defining the line of sight";
+                        qpa[7][4]="none of these.";
+
+                        qpa[8][0]="The intercept of a staff____";
+                        qpa[8][1]="is maximum if the staff is held truly normal to the line of sight.";
+                        qpa[8][2]="is minimum if the staff is held truly normal to the line of sight";
+                        qpa[8][3]="decreases if the staff is tilted away from normal";
+                        qpa[8][4]="increases if the staff is tilted towards normal.";
+
+                        qpa[9][0]="In case of Raymond pile";
+                        qpa[9][1]="lengths vary from 6 m to 12 m";
+                        qpa[9][2]="diameter of top of piles varies from 40 cm to 60 cm";
+                        qpa[9][3]="diameter of pile at bottom varies from 20 cm to 28 cm";
+                        qpa[9][4]="all the above.";
+                        
+                        qpa[10][0]="Queen closer may be placed";
+                        qpa[10][1]="in header course";
+                        qpa[10][2]="in stretcher course";
+                        qpa[10][3]="in header course next to first brick";
+                        qpa[10][4]="in stretcher course next to first brick";
+
+                        qpa[11][0]="Dado is usually provided in";
+                        qpa[11][1]="dinning halls";
+                        qpa[11][2]="bath rooms";
+                        qpa[11][3]="living rooms";
+                        qpa[11][4]="verandah";
+                        
+                        qpa[12][0]="Foundation in which cantilever beam is provided,known as";
+                        qpa[12][1]="strip footing";
+                        qpa[12][2]="strap footing";
+                        qpa[12][3]="combined footing";
+                        qpa[12][4]="raft footing";
+
+                        qpa[13][0]="Foundations are placed below ground level, to increase";
+                        qpa[13][1]="strength";
+                        qpa[13][2]="workability";
+                        qpa[13][3]="stability of structure";
+                        qpa[13][4]="all the above";
+
+                        qpa[14][0]="Stud(s) of a common wooden partition";
+                        qpa[14][1]="are vertical wooden members";
+                        qpa[14][2]="is the upper horizontal wooden member";
+                        qpa[14][3]="is the lower horizontal wooden member";
+                        qpa[14][4]="are the intermediate horizontal wooden members";
+
+                                               
+                       
+                        
+                        //qca stores pairs of question and its correct answer
+                        qca=new String[15][2];
+                        
+                        qca[0][0]="mortar, the binding material is________";
+                        qca[0][1]="Cement";
+
+                        qca[1][0]="Lacquer paints__";
+                        qca[1][1]="All the above";
+
+                        qca[2][0]="Wrought iron contains carbon upto";
+                        qca[2][1]="0.25%";
+
+                        qca[3][0]="Pick up the polymineralic rock from the following:";
+                        qca[3][1]="Granite";
+
+
+                        qca[4][0]="Pick up the correct statement from the following:";
+                        qca[4][1]="All the above";
+
+                        qca[5][0]="Hydrographic surveys deal with the mapping of";
+                        qca[5][1]="large water bodies";
+
+                        qca[6][0]="An ideal vertical curve to join two gradients, is";
+                        qca[6][1]="parabolic";
+                        
+                        qca[7][0]="Pick up the correct statement from the following :";
+                        qca[7][1]="the eyepiece plays no part in defining the line of sight";
+                        
+                        qca[8][0]="The intercept of a staff____";
+                        qca[8][1]="is minimum if the staff is held truly normal to the line of sight.";
+
+                        qca[9][0]="In case of Raymond pile";
+                        qca[9][1]="all the above.";
+                        
+                        qca[10][0]="Queen closer may be placed";
+                        qca[10][1]="in header course next to first brick";
+
+                        qca[11][0]="Dado is usually provided in";
+                        qca[11][1]="bath rooms";
+
+                        qca[12][0]="The foundation in which a cantilever beam is provided to join two footings, is known as";
+                        qca[12][1]="strap footing";
+
+                        qca[13][0]="The foundations are placed below ground level, to increase";
+                        qca[13][1]="stability of structure";
+
+
+                        qca[14][0]="Stud(s) of a common wooden partition";
+                        qca[14][1]="are vertical wooden members";
+
+                       
+
+                      
+
+                        
+                        //create a map object to store pairs of question and selected answer
+                        map=new HashMap<Integer, String>();
+                        
+                        }
+        public String getSelection(){
+                        String selectedChoice=null;
+                        Enumeration<AbstractButton> buttons=bg.getElements();  
+                        while(buttons.hasMoreElements())  
+                        {  
+                        JRadioButton temp=(JRadioButton)buttons.nextElement();  
+                        if(temp.isSelected())  
+                                    {  
+                                                selectedChoice=temp.getText();
+                                    }  
+                         }   
+                        return(selectedChoice);
+            }
+
+
+        public void readqa(int qid){
+                        lblmess.setText("  "+qpa[qid][0]);
+                        choice1.setText(qpa[qid][1]);
+                        choice2.setText(qpa[qid][2]);
+                        choice3.setText(qpa[qid][3]);
+                        choice4.setText(qpa[qid][4]);
+                        choice1.setSelected(true); 
+            }
+        public void reset(){
+                        qaid=0;
+                        map.clear();
+                        readqa(qaid);
+                        btnext.setText("Next");
+                        }
+        public int calCorrectAnswer(){
+                        int qnum=15;
+                        int count=0;
+                        for(int qid=0;qid<qnum;qid++)
+                                    if(qca[qid][1].equals(map.get(qid))) count++;
+                        return count;
+            }
+        
+        
+        
+        
+        
+        
+
+        public class Report extends JFrame
+        {
+        	
+        	
+        
+        	 /**
+			 * 
+			 */
+			private static final long serialVersionUID = 1L;
+
+
+			public Report() {
+        		 
+                
+                                   setTitle("Career World --Way To Success");
+                                   setBounds(-10,0,1800,740);
+                                   setBackground(Color.WHITE);
+                                 // setLayout(new FlowLayout());
+                                    
+                                    ImageIcon icon=new ImageIcon("PicsArt_1485415453700.png");
+                                                                     
+                                    setIconImage(icon.getImage());
+           
+                                   
+                        	                                 		
+               
+                                    addWindowListener(new WindowAdapter(){
+                                                            public void windowClosing(WindowEvent e){
+                                                                        dispose();
+                                                                        reset();
+                                                            }
+                                                });
+                                    
+                                   
+                                    
+                                    
+                                    Draw d=new Draw();                                   
+                                   add(d);
+                                   
+                                   setVisible(true);
+                                  
+                            
+                       	        
+                                   
+                                    }
+                        
+                        
+                  class Draw extends Canvas
+                  {
+                	  
+                	  private static final long serialVersionUID = 1L;
+                	  
+                	  public void paint(Graphics g)
+                	  {
+                                                int qnum=15;
+                                                int x=10;
+                                                int y=20;
+                                               
+                                             
+                                                for(int i=0;i<qnum;i++){
+                                                	
+                                                	   
+                                                            //print the 1st column
+                                                            g.setFont(new Font("Arial",Font.BOLD,15));                                          
+                                                            g.drawString(i+1+". "+qca[i][0], x,y);
+                                                            y+=25;            
+                                                            g.setFont(new Font("Arial",Font.PLAIN,12));                              
+                                                            g.drawString("      Correct answer:"+qca[i][1], x,y);
+                                                            y+=25;
+                                                            g.drawString("      Your answer:"+map.get(i), x,y);
+                                                            y+=25;
+                                                            //print the 2nd column
+                                                           if(y>600) 
+                                                           {
+                                                        	   
+                                                         	y=25;
+                                                             x=450;
+                                                            }
+                                                          
+                                                         
+
+                                                           
+                                                           
+                                                  	   
+                                                           
+                                                           
+                                                            
+                                                }
+                                                
+                                                //Show number of correct answers
+                                                int numc=calCorrectAnswer();
+                                                g.setColor(Color.BLUE);
+                                                g.setFont(new Font("Arial",Font.BOLD,20));
+                                                g.drawString("Number of correct answers:"+numc,500,650);
+                        
+                                            
+                                    }   
+                        }
+                                    
+            }
+
+
+
+
+
+
+
+		@Override
+		public void actionPerformed(ActionEvent arg0) {
+			// TODO Auto-generated method stub
+			
+		}
+}
+        public class apticivil{
+        	  
+
+        public static void main(String args[])
+        {
+                     new apti2();
+                     
+             	
+        }
+
+		public void setVisible(boolean b) {
+			// TODO Auto-generated method stub
+			this.setVisible(true);
+		}
+
+		
+}
+package code;
+
+
+
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.*;
+import javax.swing.Timer;
+import java.util.*;
+class  apti2 extends JFrame implements ActionListener
+{
+            /**
+             * 
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+			JPanel panel;
+            JPanel panelresult;
+            JRadioButton choice1;
+            JRadioButton choice2;
+            JRadioButton choice3;
+            JRadioButton choice4;
+            ButtonGroup bg;
+            JLabel lblmess;
+            JButton btnext;
+            String[][] qpa;
+            String[][] qca;
+            int qaid;
+            private Timer tim;
+            private int t;
+            private JLabel lb2;
+            HashMap<Integer, String> map;
+            
+            
+           
+                
+
+           public apti2()
+           {
+                      initializedata();
+                      setTitle("Career World --Way To Success");
+                      setDefaultCloseOperation(EXIT_ON_CLOSE);
+                      setBounds(-10,0,1800,740);
+                    
+                      
+                      Container cont=getContentPane();
+                      cont.setLayout(null); 
+                      
+                     
+                      ImageIcon icon=new ImageIcon("C:\\Users\\TAK\\workspace\\CareerWorld\\src\\image\\PicsArt_1485415453700.png");
+                      ImageIcon icon1=new ImageIcon("C:\\Users\\TAK\\workspace\\CareerWorld\\src\\image\\gfdt.jpg");
+                      ImageIcon icon2=new ImageIcon("C:\\Users\\TAK\\workspace\\CareerWorld\\src\\image\\aptitude-test.jpg");
+                      
+             
+                      
+                     setIconImage(icon.getImage());
+                      
+                     
+                    bg=new ButtonGroup();      
+                    choice1=new JRadioButton("Choice1",true);
+                    choice2=new JRadioButton("Choice2",false);
+                    choice3=new JRadioButton("Choice3",false);
+                    choice4=new JRadioButton("Choice4",false);
+                    bg.add(choice1);
+                    bg.add(choice2);
+                    bg.add(choice3);
+                    bg.add(choice4);
+                   lblmess=new JLabel("Choose a correct anwswer");
+                    lblmess.setForeground(Color.BLUE);
+                   lblmess.setFont(new Font("AR JULIAN", Font.BOLD, 20));
+           
+                  
+                   
+                  
+       	        
+       	  
+             JLabel l1 = new JLabel(icon1);
+ 	        l1.setBounds(-20,-50,1400,450);
+             
+             JLabel l2=new JLabel(icon2);
+             l2.setBounds(1000,300,350,330);
+             
+             
+             panel=new JPanel();
+             panel.setBackground(Color.white);
+             panel.setBounds(380,300,600,400);
+         
+
+       	     
+       	     
+       	     
+                   
+                    btnext=new JButton("Next");
+                    
+                    btnext.setForeground(Color.red);
+                    btnext.setFont(new Font("AR JULIAN", Font.PLAIN, 20));
+                    btnext.setBorder(null);
+                 //   btnext.setBounds(300,340,200,50);
+                  
+                    btnext.addActionListener(new ActionListener(){
+                    public void actionPerformed(ActionEvent e){
+                        
+                        t=10;
+                        lb2.setText(String.valueOf(t));
+                        tim.start();
+                       
+                           if(btnext.getText().equals("Next")){
+                                                if(qaid<14){
+                                                            
+                                                            map.put(qaid,getSelection());
+                                                            qaid++;
+                                                            readqa(qaid);
+                                                            }
+                                                else {
+                                                            map.put(qaid,getSelection());
+                                                          
+                                                            btnext.setText("Last Question after 10 sec it will be directed to Result >>>");
+                                                            btnext.setEnabled(false);
+                                                         }
+                                                }
+                                   // else if(btnext.getText().equals("Result >>>"))
+                                     //           new Report();
+                          
+                        }
+                    });
+
+                    
+                    
+                    t=10;
+
+                  //Taimer
+                  lb2=new JLabel("10");
+                  lb2.setBounds(150,450,80,80);
+                 Font f1=new Font("Algerian",Font.BOLD,80);
+     	         lb2.setFont(f1);
+     	         lb2.setForeground(Color.red);
+     	         
+                  tim=new Timer(1000,new ActionListener(){
+                      @Override
+                      public void actionPerformed(ActionEvent e){
+                          if(t>0){
+                          t--;
+                          lb2.setText(String.valueOf(t));
+                          }else{
+                              tim.stop();
+                              
+                              JOptionPane.showMessageDialog(null, "Time's up");
+                              
+                              t=10;
+                              lb2.setText(String.valueOf(t));
+                              tim.start();
+                              
+                             
+                              
+                              if(qaid<14){
+                                  
+                                  map.put(qaid,getSelection());
+                                  qaid++;
+                                  readqa(qaid);
+                                  }
+                      else {
+                                  map.put(qaid,getSelection());
+                                  btnext.setText("Result >>>");
+                                  new Report();
+                                  setVisible(false);
+                                tim.stop();
+                               }
+                         
+                           
+                             
+                             
+                              } 
+        
+                          
+                          }
+                      });
+                  
+                  t=10;
+
+                  //Taimer
+                  lb2=new JLabel("10");
+                  lb2.setBounds(150,450,80,80);
+                 
+     	         lb2.setFont(f1);
+     	         lb2.setForeground(Color.red);
+     	         
+                 
+                     
+                      
+                          if(t>0)
+                          {
+                          t--;
+                          lb2.setText(String.valueOf(t));
+                          }
+                          else
+                          {
+                              tim.stop();
+                              
+                          }
+                   
+                    
+                    
+                   
+                    panel.setLayout(new GridLayout(6,2));
+                   panel.add(lblmess);
+                    panel.add(choice1);
+                    panel.add(choice2);
+                    panel.add(choice3);
+                    panel.add(choice4);
+                    panel.add(btnext);
+                    cont.add(lb2);
+                    cont.add(panel);
+                   cont.add(l1);
+                   cont.add(l2);
+                 
+                   
+                    qaid=0;
+                    readqa(qaid);
+        
+                    
+                    
+                    tim.start();
+                    setVisible(true);
+            }
+           
+           
+               
+        public void initializedata(){
+                        //qpa stores pairs of question and its possible answers
+                        qpa=new String[15][5];
+
+                        qpa[0][0]="In a mortar, the binding material is_______";
+                        qpa[0][1]="Cement";
+                        qpa[0][2]="Sand";
+                        qpa[0][3]="Surkhi";
+                        qpa[0][4]="Cinder";
+
+                        qpa[1][0]="Lacquer paints__";
+                        qpa[1][1]="are generally applied on structural steel";
+                        qpa[1][2]="are less durable as compared to enamel paints";
+                        qpa[1][3]="consist of resin and nitro-cellulose";
+                        qpa[1][4]="all the above";
+                        
+                        qpa[2][0]="Wrought iron contains carbon upto";
+                        qpa[2][1]="0.25%";
+                        qpa[2][2]="1.0%";
+                        qpa[2][3]="1.5%";
+                        qpa[2][4]="2%";
+
+                        qpa[3][0]="Pick up the polymineralic rock from the following:";
+                        qpa[3][1]="Quartz sand";
+                        qpa[3][2]="Pure gypsum";
+                        qpa[3][3]="Magnesite";
+                        qpa[3][4]="Granite";
+
+                        qpa[4][0]="Pick up the correct statement from the following:";
+                        qpa[4][1]="For thin structures subjected to wetting and drying, the water cement ratio should be 0.45";
+                        qpa[4][2]="For mass concrete structures subjected to wetting and drying, the water ratio should be 0.55";
+                        qpa[4][3]="For thin structures which remain continuously under water, the water-cement ratio by weight should be 0.55";
+                        qpa[4][4]="All the above";
+
+                        qpa[5][0]="Hydrographic surveys deal with the mapping of";
+                        qpa[5][1]="large water bodies";
+                        qpa[5][2]="heavenly bodies";
+                        qpa[5][3]="mountaineous region";
+                        qpa[5][4]="canal system";
+
+                        qpa[6][0]="An ideal vertical curve to join two gradients, is ";
+                        qpa[6][1]="Circular";
+                        qpa[6][2]="Parabolic";
+                        qpa[6][3]="Elliptical";
+                        qpa[6][4]="None of these.";
+
+                        qpa[7][0]="Pick up the correct statement from the following :";
+                        qpa[7][1]="the eyepiece plays no part in defining the line of sight";
+                        qpa[7][2]="the diaphragm plays no part in defining the line of sight";
+                        qpa[7][3]="the optical centre of the objective plays no part in defining the line of sight";
+                        qpa[7][4]="none of these.";
+
+                        qpa[8][0]="The intercept of a staff____";
+                        qpa[8][1]="is maximum if the staff is held truly normal to the line of sight.";
+                        qpa[8][2]="is minimum if the staff is held truly normal to the line of sight";
+                        qpa[8][3]="decreases if the staff is tilted away from normal";
+                        qpa[8][4]="increases if the staff is tilted towards normal.";
+
+                        qpa[9][0]="In case of Raymond pile";
+                        qpa[9][1]="lengths vary from 6 m to 12 m";
+                        qpa[9][2]="diameter of top of piles varies from 40 cm to 60 cm";
+                        qpa[9][3]="diameter of pile at bottom varies from 20 cm to 28 cm";
+                        qpa[9][4]="all the above.";
+                        
+                        qpa[10][0]="Queen closer may be placed";
+                        qpa[10][1]="in header course";
+                        qpa[10][2]="in stretcher course";
+                        qpa[10][3]="in header course next to first brick";
+                        qpa[10][4]="in stretcher course next to first brick";
+
+                        qpa[11][0]="Dado is usually provided in";
+                        qpa[11][1]="dinning halls";
+                        qpa[11][2]="bath rooms";
+                        qpa[11][3]="living rooms";
+                        qpa[11][4]="verandah";
+                        
+                        qpa[12][0]="Foundation in which cantilever beam is provided,known as";
+                        qpa[12][1]="strip footing";
+                        qpa[12][2]="strap footing";
+                        qpa[12][3]="combined footing";
+                        qpa[12][4]="raft footing";
+
+                        qpa[13][0]="Foundations are placed below ground level, to increase";
+                        qpa[13][1]="strength";
+                        qpa[13][2]="workability";
+                        qpa[13][3]="stability of structure";
+                        qpa[13][4]="all the above";
+
+                        qpa[14][0]="Stud(s) of a common wooden partition";
+                        qpa[14][1]="are vertical wooden members";
+                        qpa[14][2]="is the upper horizontal wooden member";
+                        qpa[14][3]="is the lower horizontal wooden member";
+                        qpa[14][4]="are the intermediate horizontal wooden members";
+
+                                               
+                       
+                        
+                        //qca stores pairs of question and its correct answer
+                        qca=new String[15][2];
+                        
+                        qca[0][0]="mortar, the binding material is________";
+                        qca[0][1]="Cement";
+
+                        qca[1][0]="Lacquer paints__";
+                        qca[1][1]="All the above";
+
+                        qca[2][0]="Wrought iron contains carbon upto";
+                        qca[2][1]="0.25%";
+
+                        qca[3][0]="Pick up the polymineralic rock from the following:";
+                        qca[3][1]="Granite";
+
+
+                        qca[4][0]="Pick up the correct statement from the following:";
+                        qca[4][1]="All the above";
+
+                        qca[5][0]="Hydrographic surveys deal with the mapping of";
+                        qca[5][1]="large water bodies";
+
+                        qca[6][0]="An ideal vertical curve to join two gradients, is";
+                        qca[6][1]="parabolic";
+                        
+                        qca[7][0]="Pick up the correct statement from the following :";
+                        qca[7][1]="the eyepiece plays no part in defining the line of sight";
+                        
+                        qca[8][0]="The intercept of a staff____";
+                        qca[8][1]="is minimum if the staff is held truly normal to the line of sight.";
+
+                        qca[9][0]="In case of Raymond pile";
+                        qca[9][1]="all the above.";
+                        
+                        qca[10][0]="Queen closer may be placed";
+                        qca[10][1]="in header course next to first brick";
+
+                        qca[11][0]="Dado is usually provided in";
+                        qca[11][1]="bath rooms";
+
+                        qca[12][0]="The foundation in which a cantilever beam is provided to join two footings, is known as";
+                        qca[12][1]="strap footing";
+
+                        qca[13][0]="The foundations are placed below ground level, to increase";
+                        qca[13][1]="stability of structure";
+
+
+                        qca[14][0]="Stud(s) of a common wooden partition";
+                        qca[14][1]="are vertical wooden members";
+
+                       
+
+                      
+
+                        
+                        //create a map object to store pairs of question and selected answer
+                        map=new HashMap<Integer, String>();
+                        
+                        }
+        public String getSelection(){
+                        String selectedChoice=null;
+                        Enumeration<AbstractButton> buttons=bg.getElements();  
+                        while(buttons.hasMoreElements())  
+                        {  
+                        JRadioButton temp=(JRadioButton)buttons.nextElement();  
+                        if(temp.isSelected())  
+                                    {  
+                                                selectedChoice=temp.getText();
+                                    }  
+                         }   
+                        return(selectedChoice);
+            }
+
+
+        public void readqa(int qid){
+                        lblmess.setText("  "+qpa[qid][0]);
+                        choice1.setText(qpa[qid][1]);
+                        choice2.setText(qpa[qid][2]);
+                        choice3.setText(qpa[qid][3]);
+                        choice4.setText(qpa[qid][4]);
+                        choice1.setSelected(true); 
+            }
+        public void reset(){
+                        qaid=0;
+                        map.clear();
+                        readqa(qaid);
+                        btnext.setText("Next");
+                        }
+        public int calCorrectAnswer(){
+                        int qnum=15;
+                        int count=0;
+                        for(int qid=0;qid<qnum;qid++)
+                                    if(qca[qid][1].equals(map.get(qid))) count++;
+                        return count;
+            }
+        
+        
+        
+        
+        
+        
+
+        public class Report extends JFrame
+        {
+        	
+        	
+        
+        	 /**
+			 * 
+			 */
+			private static final long serialVersionUID = 1L;
+
+
+			public Report() {
+        		 
+                
+                                   setTitle("Career World --Way To Success");
+                                   setBounds(-10,0,1800,740);
+                                   setBackground(Color.WHITE);
+                                 // setLayout(new FlowLayout());
+                                    
+                                    ImageIcon icon=new ImageIcon("PicsArt_1485415453700.png");
+                                                                     
+                                    setIconImage(icon.getImage());
+           
+                                   
+                        	                                 		
+               
+                                    addWindowListener(new WindowAdapter(){
+                                                            public void windowClosing(WindowEvent e){
+                                                                        dispose();
+                                                                        reset();
+                                                            }
+                                                });
+                                    
+                                   
+                                    
+                                    
+                                    Draw d=new Draw();                                   
+                                   add(d);
+                                   
+                                   setVisible(true);
+                                  
+                            
+                       	        
+                                   
+                                    }
+                        
+                        
+                  class Draw extends Canvas
+                  {
+                	  
+                	  private static final long serialVersionUID = 1L;
+                	  
+                	  public void paint(Graphics g)
+                	  {
+                                                int qnum=15;
+                                                int x=10;
+                                                int y=20;
+                                               
+                                             
+                                                for(int i=0;i<qnum;i++){
+                                                	
+                                                	   
+                                                            //print the 1st column
+                                                            g.setFont(new Font("Arial",Font.BOLD,15));                                          
+                                                            g.drawString(i+1+". "+qca[i][0], x,y);
+                                                            y+=25;            
+                                                            g.setFont(new Font("Arial",Font.PLAIN,12));                              
+                                                            g.drawString("      Correct answer:"+qca[i][1], x,y);
+                                                            y+=25;
+                                                            g.drawString("      Your answer:"+map.get(i), x,y);
+                                                            y+=25;
+                                                            //print the 2nd column
+                                                           if(y>600) 
+                                                           {
+                                                        	   
+                                                         	y=25;
+                                                             x=450;
+                                                            }
+                                                          
+                                                         
+
+                                                           
+                                                           
+                                                  	   
+                                                           
+                                                           
+                                                            
+                                                }
+                                                
+                                                //Show number of correct answers
+                                                int numc=calCorrectAnswer();
+                                                g.setColor(Color.BLUE);
+                                                g.setFont(new Font("Arial",Font.BOLD,20));
+                                                g.drawString("Number of correct answers:"+numc,500,650);
+                        
+                                            
+                                    }   
+                        }
+                                    
+            }
+
+
+
+
+
+
+
+		@Override
+		public void actionPerformed(ActionEvent arg0) {
+			// TODO Auto-generated method stub
+			
+		}
+}
+        public class apticivil{
+        	  
+
+        public static void main(String args[])
+        {
+                     new apti2();
+                     
+             	
+        }
+
+		public void setVisible(boolean b) {
+			// TODO Auto-generated method stub
+			this.setVisible(true);
+		}
+
+		
+}
+
+            
+
+package code;
+
+
+
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.*;
+import javax.swing.Timer;
+import java.util.*;
+class  apti2 extends JFrame implements ActionListener
+{
+            /**
+             * 
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+			JPanel panel;
+            JPanel panelresult;
+            JRadioButton choice1;
+            JRadioButton choice2;
+            JRadioButton choice3;
+            JRadioButton choice4;
+            ButtonGroup bg;
+            JLabel lblmess;
+            JButton btnext;
+            String[][] qpa;
+            String[][] qca;
+            int qaid;
+            private Timer tim;
+            private int t;
+            private JLabel lb2;
+            HashMap<Integer, String> map;
+            
+            
+           
+                
+
+           public apti2()
+           {
+                      initializedata();
+                      setTitle("Career World --Way To Success");
+                      setDefaultCloseOperation(EXIT_ON_CLOSE);
+                      setBounds(-10,0,1800,740);
+                    
+                      
+                      Container cont=getContentPane();
+                      cont.setLayout(null); 
+                      
+                     
+                      ImageIcon icon=new ImageIcon("C:\\Users\\TAK\\workspace\\CareerWorld\\src\\image\\PicsArt_1485415453700.png");
+                      ImageIcon icon1=new ImageIcon("C:\\Users\\TAK\\workspace\\CareerWorld\\src\\image\\gfdt.jpg");
+                      ImageIcon icon2=new ImageIcon("C:\\Users\\TAK\\workspace\\CareerWorld\\src\\image\\aptitude-test.jpg");
+                      
+             
+                      
+                     setIconImage(icon.getImage());
+                      
+                     
+                    bg=new ButtonGroup();      
+                    choice1=new JRadioButton("Choice1",true);
+                    choice2=new JRadioButton("Choice2",false);
+                    choice3=new JRadioButton("Choice3",false);
+                    choice4=new JRadioButton("Choice4",false);
+                    bg.add(choice1);
+                    bg.add(choice2);
+                    bg.add(choice3);
+                    bg.add(choice4);
+                   lblmess=new JLabel("Choose a correct anwswer");
+                    lblmess.setForeground(Color.BLUE);
+                   lblmess.setFont(new Font("AR JULIAN", Font.BOLD, 20));
+           
+                  
+                   
+                  
+       	        
+       	  
+             JLabel l1 = new JLabel(icon1);
+ 	        l1.setBounds(-20,-50,1400,450);
+             
+             JLabel l2=new JLabel(icon2);
+             l2.setBounds(1000,300,350,330);
+             
+             
+             panel=new JPanel();
+             panel.setBackground(Color.white);
+             panel.setBounds(380,300,600,400);
+         
+
+       	     
+       	     
+       	     
+                   
+                    btnext=new JButton("Next");
+                    
+                    btnext.setForeground(Color.red);
+                    btnext.setFont(new Font("AR JULIAN", Font.PLAIN, 20));
+                    btnext.setBorder(null);
+                 //   btnext.setBounds(300,340,200,50);
+                  
+                    btnext.addActionListener(new ActionListener(){
+                    public void actionPerformed(ActionEvent e){
+                        
+                        t=10;
+                        lb2.setText(String.valueOf(t));
+                        tim.start();
+                       
+                           if(btnext.getText().equals("Next")){
+                                                if(qaid<14){
+                                                            
+                                                            map.put(qaid,getSelection());
+                                                            qaid++;
+                                                            readqa(qaid);
+                                                            }
+                                                else {
+                                                            map.put(qaid,getSelection());
+                                                          
+                                                            btnext.setText("Last Question after 10 sec it will be directed to Result >>>");
+                                                            btnext.setEnabled(false);
+                                                         }
+                                                }
+                                   // else if(btnext.getText().equals("Result >>>"))
+                                     //           new Report();
+                          
+                        }
+                    });
+
+                    
+                    
+                    t=10;
+
+                  //Taimer
+                  lb2=new JLabel("10");
+                  lb2.setBounds(150,450,80,80);
+                 Font f1=new Font("Algerian",Font.BOLD,80);
+     	         lb2.setFont(f1);
+     	         lb2.setForeground(Color.red);
+     	         
+                  tim=new Timer(1000,new ActionListener(){
+                      @Override
+                      public void actionPerformed(ActionEvent e){
+                          if(t>0){
+                          t--;
+                          lb2.setText(String.valueOf(t));
+                          }else{
+                              tim.stop();
+                              
+                              JOptionPane.showMessageDialog(null, "Time's up");
+                              
+                              t=10;
+                              lb2.setText(String.valueOf(t));
+                              tim.start();
+                              
+                             
+                              
+                              if(qaid<14){
+                                  
+                                  map.put(qaid,getSelection());
+                                  qaid++;
+                                  readqa(qaid);
+                                  }
+                      else {
+                                  map.put(qaid,getSelection());
+                                  btnext.setText("Result >>>");
+                                  new Report();
+                                  setVisible(false);
+                                tim.stop();
+                               }
+                         
+                           
+                             
+                             
+                              } 
+        
+                          
+                          }
+                      });
+                  
+                  t=10;
+
+                  //Taimer
+                  lb2=new JLabel("10");
+                  lb2.setBounds(150,450,80,80);
+                 
+     	         lb2.setFont(f1);
+     	         lb2.setForeground(Color.red);
+     	         
+                 
+                     
+                      
+                          if(t>0)
+                          {
+                          t--;
+                          lb2.setText(String.valueOf(t));
+                          }
+                          else
+                          {
+                              tim.stop();
+                              
+                          }
+                   
+                    
+                    
+                   
+                    panel.setLayout(new GridLayout(6,2));
+                   panel.add(lblmess);
+                    panel.add(choice1);
+                    panel.add(choice2);
+                    panel.add(choice3);
+                    panel.add(choice4);
+                    panel.add(btnext);
+                    cont.add(lb2);
+                    cont.add(panel);
+                   cont.add(l1);
+                   cont.add(l2);
+                 
+                   
+                    qaid=0;
+                    readqa(qaid);
+        
+                    
+                    
+                    tim.start();
+                    setVisible(true);
+            }
+           
+           
+               
+        public void initializedata(){
+                        //qpa stores pairs of question and its possible answers
+                        qpa=new String[15][5];
+
+                        qpa[0][0]="In a mortar, the binding material is_______";
+                        qpa[0][1]="Cement";
+                        qpa[0][2]="Sand";
+                        qpa[0][3]="Surkhi";
+                        qpa[0][4]="Cinder";
+
+                        qpa[1][0]="Lacquer paints__";
+                        qpa[1][1]="are generally applied on structural steel";
+                        qpa[1][2]="are less durable as compared to enamel paints";
+                        qpa[1][3]="consist of resin and nitro-cellulose";
+                        qpa[1][4]="all the above";
+                        
+                        qpa[2][0]="Wrought iron contains carbon upto";
+                        qpa[2][1]="0.25%";
+                        qpa[2][2]="1.0%";
+                        qpa[2][3]="1.5%";
+                        qpa[2][4]="2%";
+
+                        qpa[3][0]="Pick up the polymineralic rock from the following:";
+                        qpa[3][1]="Quartz sand";
+                        qpa[3][2]="Pure gypsum";
+                        qpa[3][3]="Magnesite";
+                        qpa[3][4]="Granite";
+
+                        qpa[4][0]="Pick up the correct statement from the following:";
+                        qpa[4][1]="For thin structures subjected to wetting and drying, the water cement ratio should be 0.45";
+                        qpa[4][2]="For mass concrete structures subjected to wetting and drying, the water ratio should be 0.55";
+                        qpa[4][3]="For thin structures which remain continuously under water, the water-cement ratio by weight should be 0.55";
+                        qpa[4][4]="All the above";
+
+                        qpa[5][0]="Hydrographic surveys deal with the mapping of";
+                        qpa[5][1]="large water bodies";
+                        qpa[5][2]="heavenly bodies";
+                        qpa[5][3]="mountaineous region";
+                        qpa[5][4]="canal system";
+
+                        qpa[6][0]="An ideal vertical curve to join two gradients, is ";
+                        qpa[6][1]="Circular";
+                        qpa[6][2]="Parabolic";
+                        qpa[6][3]="Elliptical";
+                        qpa[6][4]="None of these.";
+
+                        qpa[7][0]="Pick up the correct statement from the following :";
+                        qpa[7][1]="the eyepiece plays no part in defining the line of sight";
+                        qpa[7][2]="the diaphragm plays no part in defining the line of sight";
+                        qpa[7][3]="the optical centre of the objective plays no part in defining the line of sight";
+                        qpa[7][4]="none of these.";
+
+                        qpa[8][0]="The intercept of a staff____";
+                        qpa[8][1]="is maximum if the staff is held truly normal to the line of sight.";
+                        qpa[8][2]="is minimum if the staff is held truly normal to the line of sight";
+                        qpa[8][3]="decreases if the staff is tilted away from normal";
+                        qpa[8][4]="increases if the staff is tilted towards normal.";
+
+                        qpa[9][0]="In case of Raymond pile";
+                        qpa[9][1]="lengths vary from 6 m to 12 m";
+                        qpa[9][2]="diameter of top of piles varies from 40 cm to 60 cm";
+                        qpa[9][3]="diameter of pile at bottom varies from 20 cm to 28 cm";
+                        qpa[9][4]="all the above.";
+                        
+                        qpa[10][0]="Queen closer may be placed";
+                        qpa[10][1]="in header course";
+                        qpa[10][2]="in stretcher course";
+                        qpa[10][3]="in header course next to first brick";
+                        qpa[10][4]="in stretcher course next to first brick";
+
+                        qpa[11][0]="Dado is usually provided in";
+                        qpa[11][1]="dinning halls";
+                        qpa[11][2]="bath rooms";
+                        qpa[11][3]="living rooms";
+                        qpa[11][4]="verandah";
+                        
+                        qpa[12][0]="Foundation in which cantilever beam is provided,known as";
+                        qpa[12][1]="strip footing";
+                        qpa[12][2]="strap footing";
+                        qpa[12][3]="combined footing";
+                        qpa[12][4]="raft footing";
+
+                        qpa[13][0]="Foundations are placed below ground level, to increase";
+                        qpa[13][1]="strength";
+                        qpa[13][2]="workability";
+                        qpa[13][3]="stability of structure";
+                        qpa[13][4]="all the above";
+
+                        qpa[14][0]="Stud(s) of a common wooden partition";
+                        qpa[14][1]="are vertical wooden members";
+                        qpa[14][2]="is the upper horizontal wooden member";
+                        qpa[14][3]="is the lower horizontal wooden member";
+                        qpa[14][4]="are the intermediate horizontal wooden members";
+
+                                               
+                       
+                        
+                        //qca stores pairs of question and its correct answer
+                        qca=new String[15][2];
+                        
+                        qca[0][0]="mortar, the binding material is________";
+                        qca[0][1]="Cement";
+
+                        qca[1][0]="Lacquer paints__";
+                        qca[1][1]="All the above";
+
+                        qca[2][0]="Wrought iron contains carbon upto";
+                        qca[2][1]="0.25%";
+
+                        qca[3][0]="Pick up the polymineralic rock from the following:";
+                        qca[3][1]="Granite";
+
+
+                        qca[4][0]="Pick up the correct statement from the following:";
+                        qca[4][1]="All the above";
+
+                        qca[5][0]="Hydrographic surveys deal with the mapping of";
+                        qca[5][1]="large water bodies";
+
+                        qca[6][0]="An ideal vertical curve to join two gradients, is";
+                        qca[6][1]="parabolic";
+                        
+                        qca[7][0]="Pick up the correct statement from the following :";
+                        qca[7][1]="the eyepiece plays no part in defining the line of sight";
+                        
+                        qca[8][0]="The intercept of a staff____";
+                        qca[8][1]="is minimum if the staff is held truly normal to the line of sight.";
+
+                        qca[9][0]="In case of Raymond pile";
+                        qca[9][1]="all the above.";
+                        
+                        qca[10][0]="Queen closer may be placed";
+                        qca[10][1]="in header course next to first brick";
+
+                        qca[11][0]="Dado is usually provided in";
+                        qca[11][1]="bath rooms";
+
+                        qca[12][0]="The foundation in which a cantilever beam is provided to join two footings, is known as";
+                        qca[12][1]="strap footing";
+
+                        qca[13][0]="The foundations are placed below ground level, to increase";
+                        qca[13][1]="stability of structure";
+
+
+                        qca[14][0]="Stud(s) of a common wooden partition";
+                        qca[14][1]="are vertical wooden members";
+
+                       
+
+                      
+
+                        
+                        //create a map object to store pairs of question and selected answer
+                        map=new HashMap<Integer, String>();
+                        
+                        }
+        public String getSelection(){
+                        String selectedChoice=null;
+                        Enumeration<AbstractButton> buttons=bg.getElements();  
+                        while(buttons.hasMoreElements())  
+                        {  
+                        JRadioButton temp=(JRadioButton)buttons.nextElement();  
+                        if(temp.isSelected())  
+                                    {  
+                                                selectedChoice=temp.getText();
+                                    }  
+                         }   
+                        return(selectedChoice);
+            }
+
+
+        public void readqa(int qid){
+                        lblmess.setText("  "+qpa[qid][0]);
+                        choice1.setText(qpa[qid][1]);
+                        choice2.setText(qpa[qid][2]);
+                        choice3.setText(qpa[qid][3]);
+                        choice4.setText(qpa[qid][4]);
+                        choice1.setSelected(true); 
+            }
+        public void reset(){
+                        qaid=0;
+                        map.clear();
+                        readqa(qaid);
+                        btnext.setText("Next");
+                        }
+        public int calCorrectAnswer(){
+                        int qnum=15;
+                        int count=0;
+                        for(int qid=0;qid<qnum;qid++)
+                                    if(qca[qid][1].equals(map.get(qid))) count++;
+                        return count;
+            }
+        
+        
+        
+        
+        
+        
+
+        public class Report extends JFrame
+        {
+        	
+        	
+        
+        	 /**
+			 * 
+			 */
+			private static final long serialVersionUID = 1L;
+
+
+			public Report() {
+        		 
+                
+                                   setTitle("Career World --Way To Success");
+                                   setBounds(-10,0,1800,740);
+                                   setBackground(Color.WHITE);
+                                 // setLayout(new FlowLayout());
+                                    
+                                    ImageIcon icon=new ImageIcon("PicsArt_1485415453700.png");
+                                                                     
+                                    setIconImage(icon.getImage());
+           
+                                   
+                        	                                 		
+               
+                                    addWindowListener(new WindowAdapter(){
+                                                            public void windowClosing(WindowEvent e){
+                                                                        dispose();
+                                                                        reset();
+                                                            }
+                                                });
+                                    
+                                   
+                                    
+                                    
+                                    Draw d=new Draw();                                   
+                                   add(d);
+                                   
+                                   setVisible(true);
+                                  
+                            
+                       	        
+                                   
+                                    }
+                        
+                        
+                  class Draw extends Canvas
+                  {
+                	  
+                	  private static final long serialVersionUID = 1L;
+                	  
+                	  public void paint(Graphics g)
+                	  {
+                                                int qnum=15;
+                                                int x=10;
+                                                int y=20;
+                                               
+                                             
+                                                for(int i=0;i<qnum;i++){
+                                                	
+                                                	   
+                                                            //print the 1st column
+                                                            g.setFont(new Font("Arial",Font.BOLD,15));                                          
+                                                            g.drawString(i+1+". "+qca[i][0], x,y);
+                                                            y+=25;            
+                                                            g.setFont(new Font("Arial",Font.PLAIN,12));                              
+                                                            g.drawString("      Correct answer:"+qca[i][1], x,y);
+                                                            y+=25;
+                                                            g.drawString("      Your answer:"+map.get(i), x,y);
+                                                            y+=25;
+                                                            //print the 2nd column
+                                                           if(y>600) 
+                                                           {
+                                                        	   
+                                                         	y=25;
+                                                             x=450;
+                                                            }
+                                                          
+                                                         
+
+                                                           
+                                                           
+                                                  	   
+                                                           
+                                                           
+                                                            
+                                                }
+                                                
+                                                //Show number of correct answers
+                                                int numc=calCorrectAnswer();
+                                                g.setColor(Color.BLUE);
+                                                g.setFont(new Font("Arial",Font.BOLD,20));
+                                                g.drawString("Number of correct answers:"+numc,500,650);
+                        
+                                            
+                                    }   
+                        }
+                                    
+            }
+
+
+
+
+
+
+
+		@Override
+		public void actionPerformed(ActionEvent arg0) {
+			// TODO Auto-generated method stub
+			
+		}
+}
+        public class apticivil{
+        	  
+
+        public static void main(String args[])
+        {
+                     new apti2();
+                     
+             	
+        }
+
+		public void setVisible(boolean b) {
+			// TODO Auto-generated method stub
+			this.setVisible(true);
+		}
+
+		
+}
+
+            
+
+package code;
+
+import javax.swing.*;
+import javax.swing.border.Border;
+
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+public class aftersci extends JFrame
+{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	static JFrame f1;
+
+	public static void main(String[] args) {
+        EventQueue.invokeLater(new Runnable() {
+            @SuppressWarnings("static-access")
+			public void run() {
+                try {
+                    aftersci window = new aftersci();
+                    window.f1.setVisible(true);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+        });
+    }
+	 public aftersci() {
+	        initialize();
+	    }
+
+	 private void initialize()
+	 {
+
+		  JFrame frame=new JFrame();
+	        frame.setVisible(true);
+	        //frame.setSize(800,600);
+	        //frame.setLocation(200,50);
+	        frame.setBounds(-10,0,1800,740);
+	        frame.setTitle("Career World --Way To Success");
+	        ImageIcon icon=new ImageIcon("C:\\Users\\TAK\\workspace\\CareerWorld\\src\\image\\PicsArt_1485415453700.png");
+	        ImageIcon icon1=new ImageIcon("C:\\Users\\TAK\\workspace\\CareerWorld\\src\\image\\PicsArt_1486660746024.jpg");
+	        ImageIcon icon2=new ImageIcon("C:\\Users\\TAK\\workspace\\CareerWorld\\src\\image\\direct-way-to-success-10081000.jpg");
+	        ImageIcon icon3=new ImageIcon("C:\\Users\\TAK\\workspace\\CareerWorld\\src\\image\\ca7b81256d27f757790508035a8177c0.png");
+	        ImageIcon icon4=new ImageIcon("C:\\Users\\TAK\\workspace\\CareerWorld\\src\\image\\images(1).jpg");
+	      
+	        
+	        frame.setIconImage(icon.getImage());
+	        
+	        JPanel co = new JPanel();
+	        co.setLayout(null);
+	        JScrollPane sp = new JScrollPane(co);
+	        co.setPreferredSize(new Dimension(100, 1000));
+	    
+	        //co.setBackground(Color.blue);
+	        
+	        
+	        JButton logout = new JButton(icon4);
+   	        logout.setBounds(75,740,80,80);
+   	        Cursor cur = new Cursor(Cursor.HAND_CURSOR);
+   	        logout.setCursor(cur);
+   	        
+   	     logout.addActionListener(new ActionListener()
+	     	{
+	     			public void actionPerformed(ActionEvent e)
+	     			{
+	     				logoutEvent(e);
+	     			}
+	    			
+	    	});
+
+	        JLabel label2 = new JLabel("DashBoard");
+	        label2.setBounds(50,520,300,40); 
+	        Font f1=new Font("Arial",Font.BOLD,30);
+	         label2.setFont(f1);
+	        
+	        JButton b1 = new JButton(icon3);
+	        b1.setBounds(75,560,80,80);
+	        b1.setCursor(cur);
+	        
+	        
+	        b1.addActionListener(new ActionListener()
+	     	{
+	     			public void actionPerformed(ActionEvent e)
+	     			{
+	     				b1Event(e);
+	     			}
+	    			
+	     		});
+	       
+
+	        
+	        JButton b2 = new JButton("About");
+	        b2.setBounds(50,650,130,30);
+	        b2.setCursor(cur);
+	        
+	        b2.addActionListener(new ActionListener()
+	     	{
+	     			public void actionPerformed(ActionEvent e)
+	     			{
+	     				b2Event(e);
+	     			}
+	    			
+	     		});
+	       
+
+	        
+	        JButton b3 = new JButton("Expert Guidance");
+	        b3.setBounds(50,700,130,30);
+	        b3.setCursor(cur);
+
+	        
+	        b3.addActionListener(new ActionListener()
+	     	{
+	     			public void actionPerformed(ActionEvent e)
+	     			{
+	     				b3Event(e);
+	     			}
+	    			
+	     		});
+	       
+            JButton b4 = new JButton("Computer Engineering >");
+            b4.setBounds(400,560,380,40);
+            Font f3=new Font("AR JULIAN",Font.BOLD,18);
+            b4.setFont(f3);
+            b4.setForeground(Color.blue);
+            b4.setCursor(cur);
+      
+            
+            b4.addActionListener(new ActionListener()
+	     	{
+	     			public void actionPerformed(ActionEvent e)
+	     			{
+	     				b4Event(e);
+	     			}
+	    			
+	     		});
+	       
+            
+            JButton b5 = new JButton("Mechanical Engineering >");
+            b5.setBounds(400,620,380,40);
+            b5.setFont(f3);
+            b5.setForeground(Color.blue);
+            b5.setCursor(cur);
+            
+            JButton b6 = new JButton("Civil Engineering >");
+            b6.setBounds(400,680,380,40);
+            b6.setFont(f3);
+            b6.setForeground(Color.blue);
+            b6.setCursor(cur);
+            
+            JButton b7 = new JButton("BSC >");
+            b7.setBounds(400,740,380,40);
+            b7.setFont(f3);
+            b7.setForeground(Color.blue);
+            b7.setCursor(cur);
+            
+            JButton b8 = new JButton("E&TC Engineering >");
+            b8.setBounds(400,800,380,40);
+            b8.setFont(f3);
+            b8.setForeground(Color.blue);
+            b8.setCursor(cur);
+            
+           
+            
+            
+
+            
+	        JLabel label1 = new JLabel(icon1);
+	        label1.setBounds(-25,10,1400,500);
+	        
+	        JLabel label4 = new JLabel(icon2);
+	        label4.setBounds(800,420,450,550);
+	     
+	        JLabel notice = new JLabel("* Select any of the Course above to gain more info or to start your IQ Test.");
+            notice.setBounds(400,780,1200,200);
+            notice.setForeground(Color.red);
+            Font f11=new Font("Calibri (body)",Font.PLAIN,15);
+            notice.setFont(f11);
+	     
+	        
+	        
+	        
+	        JLabel label3 = new JLabel("List of Cources after 12th : ");
+            label3.setBounds(400,500,450,70);
+            Font f2=new Font("RockWell",Font.BOLD,30);
+             label3.setFont(f2);
+	        
+             
+             
+             
+             
+	        co.add(label1);
+	        co.add(b1);
+	        co.add(b2);
+	        co.add(b3);
+	        co.add(b4);
+	        co.add(b5);
+	        co.add(b6);
+	        co.add(b7);
+	        co.add(b8);
+	       
+	        co.add(label2);
+	        co.add(label3);
+	        co.add(label4);
+	        co.add(notice);
+	        co.add(logout);
+	        
+	        
+	        frame.getContentPane().add(sp);
+
+	}
+	@SuppressWarnings("unused")
+	private Border newRoundedBorder(int i) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+	public static void logoutEvent(ActionEvent e)
+    {
+		Login l = new Login();
+	    l.setVisible(true);
+	       	
+	}
+	
+	
+	
+	public static void b2Event(ActionEvent e)
+    {
+		About a = new About();
+	    a.setVisible(true);
+	       	
+	}
+	public static void b4Event(ActionEvent e)
+    {
+		ce c = new ce();
+	    c.setVisible(true);
+	       	
+	}
+	
+	public static void b1Event(ActionEvent e)
+    {
+		Home h = new Home();
+	    h.setVisible(true);
+	       	
+	}
+	
+	
+	
+ 
+ public static void b3Event(ActionEvent e)
+    {
+		EG eg = new EG();
+	    eg.setVisible(true);
+	       	
+	}
+	
+	public void setVisible(boolean b)
+	   {
+		   this.setVisible(true);
+	   }
+	
+	
+}
+            
 
 
 
